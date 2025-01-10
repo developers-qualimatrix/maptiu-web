@@ -3,19 +3,89 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: 0 0% 100%;
+  --foreground: 0 0% 9%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 9%;
+  --primary: 221 83% 53%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 0 0% 96%;
+  --secondary-foreground: 0 0% 9%;
+  --muted: 0 0% 96%;
+  --muted-foreground: 0 0% 45%;
+  --accent: 0 0% 96%;
+  --accent-foreground: 0 0% 9%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 0 0% 89%;
+  --input: 0 0% 89%;
+  --ring: 221 83% 53%;
+  --radius: 0.5rem;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 0 0% 4%;
+    --foreground: 0 0% 93%;
+    --card: 0 0% 4%;
+    --card-foreground: 0 0% 93%;
+    --popover: 0 0% 4%;
+    --popover-foreground: 0 0% 93%;
+    --primary: 221 83% 53%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 13%;
+    --secondary-foreground: 0 0% 93%;
+    --muted: 0 0% 13%;
+    --muted-foreground: 0 0% 63%;
+    --accent: 0 0% 13%;
+    --accent-foreground: 0 0% 93%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 13%;
+    --input: 0 0% 13%;
+    --ring: 221 83% 53%;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/* Maptiu brand colors */
+:root {
+  --maptiu-blue: 221 83% 53%;
+  --maptiu-light-blue: 214 95% 93%;
+  --maptiu-dark-blue: 224 76% 48%;
+  --maptiu-gray: 220 14% 96%;
 }
+
+body {
+  @apply bg-background text-foreground;
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+@layer utilities {
+  .bg-maptiu-blue {
+    @apply bg-[hsl(var(--maptiu-blue))];
+  }
+  .bg-maptiu-light-blue {
+    @apply bg-[hsl(var(--maptiu-light-blue))];
+  }
+  .bg-maptiu-dark-blue {
+    @apply bg-[hsl(var(--maptiu-dark-blue))];
+  }
+  .bg-maptiu-gray {
+    @apply bg-[hsl(var(--maptiu-gray))];
+  }
+  .text-maptiu-blue {
+    @apply text-[hsl(var(--maptiu-blue))];
+  }
+  .text-maptiu-light-blue {
+    @apply text-[hsl(var(--maptiu-light-blue))];
+  }
+  .text-maptiu-dark-blue {
+    @apply text-[hsl(var(--maptiu-dark-blue))];
+  }
+  .text-maptiu-gray {
+    @apply text-[hsl(var(--maptiu-gray))];
+  }
+}
+
