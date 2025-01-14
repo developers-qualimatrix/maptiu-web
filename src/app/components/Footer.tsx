@@ -5,14 +5,14 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-gray-200 bg-gray-900 text-white">
+    <footer className="border-t border-gray-200 bg-[#DEEBE0] text-white m-4 rounded-lg">
       <div className="container mx-auto px-4 py-8">
         {/* Main Footer Content */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0 mb-8 mx-auto">
           <div className="flex flex-col mx-[30px] gap-6">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-[#234E48] rounded-lg flex items-center justify-center">
                 <svg
                   width="24"
                   height="24"
@@ -43,47 +43,47 @@ export default function Footer() {
                   />
                 </svg>
               </div>
-              <span className="text-xl font-semibold">Maptiu</span>
+              <span className="text-xl font-semibold text-[#234E48]">Maptiu</span>
             </Link>
 
             {/* Quick Links */}
             <nav className="grid grid-cols-2 sm:grid-cols-4 gap-8 text-left">
-              <Link href="/" className="text-gray-300 hover:text-purple-400">
+              <Link href="/" className="text-[#2A5F57] hover:text-[#409084]">
                 Home
               </Link>
               <Link
                 href="/resource-augmentation"
-                className="text-gray-300 hover:text-purple-400"
+                className="text-[#2A5F57] hover:text-[#409084]"
               >
                 Resource Augmentation
               </Link>
               <Link
                 href="/skillaccess"
-                className="text-gray-300 hover:text-purple-400"
+                className="text-[#2A5F57] hover:text-[#409084]"
               >
                 SkillAccess
               </Link>
               <Link
                 href="/hireit"
-                className="text-gray-300 hover:text-purple-400"
+                className="text-[#2A5F57] hover:text-[#409084]"
               >
                 HireIt
               </Link>
               <Link
                 href="/about"
-                className="text-gray-300 hover:text-purple-400"
+                className="text-[#2A5F57] hover:text-[#409084]"
               >
                 About Us
               </Link>
               <Link
                 href="/careers"
-                className="text-gray-300 hover:text-purple-400"
+                className="text-[#2A5F57] hover:text-[#409084]"
               >
                 Careers
               </Link>
               <Link
                 href="/contact"
-                className="text-gray-300 hover:text-purple-400"
+                className="text-[#2A5F57] hover:text-[#409084]"
               >
                 Contact Us
               </Link>
@@ -95,9 +95,9 @@ export default function Footer() {
             <input
               type="email"
               placeholder="Enter your email"
-              className="px-4 py-2 w-full sm:w-auto border border-gray-600 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+              className="px-4 py-2 w-full sm:w-auto border border-gray-600 rounded-lg bg- text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
             />
-            <button className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors w-full sm:w-auto">
+            <button className="px-4 py-2 bg-[#234E48] text-white rounded-lg hover:bg-[#409084] transition-colors w-full sm:w-auto">
               Subscribe
             </button>
           </div>
@@ -109,7 +109,7 @@ export default function Footer() {
             href="https://facebook.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-purple-400"
+            className="text-gray-400 hover:text-[#234E48]"
           >
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
               <path d="M22.675 0h-21.35C.595 0 0 .595 0 1.325v21.351C0 23.405.595 24 1.325 24h11.495v-9.294H9.691v-3.622h3.129V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.794.715-1.794 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.325-.595 1.325-1.324V1.325C24 .595 23.405 0 22.675 0z" />
@@ -119,7 +119,7 @@ export default function Footer() {
             href="https://twitter.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-purple-400"
+            className="text-gray-400 hover:text-[#234E48]"
           >
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
               <path d="M23.954 4.569c-.885.392-1.83.656-2.825.775 1.014-.608 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.897-.959-2.178-1.559-3.594-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124-4.087-.205-7.713-2.165-10.141-5.144-.422.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.395 0-.779-.023-1.158-.067 2.179 1.397 4.768 2.212 7.557 2.212 9.054 0 14.002-7.496 14.002-13.986 0-.21 0-.423-.015-.634.961-.695 1.8-1.562 2.46-2.549z" />
@@ -129,7 +129,7 @@ export default function Footer() {
             href="https://linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-purple-400"
+            className="text-gray-400 hover:text-[#234E48]"
           >
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
               <path d="M22.23 0H1.77C.792 0 0 .774 0 1.729v20.542C0 23.226.792 24 1.77 24h20.46C23.208 24 24 23.226 24 22.271V1.729C24 .774 23.208 0 22.23 0zM7.12 20.452H3.56V9.048h3.56v11.404zM5.34 7.548c-1.14 0-2.06-.92-2.06-2.06s.92-2.06 2.06-2.06 2.06.92 2.06 2.06-.92 2.06-2.06 2.06zm15.112 12.904h-3.56v-5.604c0-1.336-.026-3.06-1.864-3.06-1.864 0-2.15 1.454-2.15 2.956v5.708h-3.56V9.048h3.42v1.56h.048c.476-.9 1.636-1.848 3.364-1.848 3.6 0 4.264 2.368 4.264 5.452v6.24z" />
@@ -139,7 +139,7 @@ export default function Footer() {
             href="https://instagram.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-purple-400"
+            className="text-gray-400 hover:text-[#234E48]"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
