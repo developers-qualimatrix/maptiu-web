@@ -12,9 +12,9 @@ export default function AboutUs() {
 
       {/* Purple circle - positioned partially off-screen on the left */}
       <div 
-        className="absolute w-[30vw] aspect-square max-w-[400px] min-w-[200px]" 
+        className="absolute w-[22vw] aspect-square max-w-[400px] min-w-[200px]" 
         style={{
-          background: '#4A154B', // Slack purple
+          background: '#16A34A', // Slack purple
           borderRadius: '50%',
           left: '-15vw',
           top: '10vh',
@@ -23,12 +23,12 @@ export default function AboutUs() {
       
       {/* Green circle - positioned partially off-screen on the right */}
       <div 
-        className="absolute w-[30vw] aspect-square max-w-[400px] min-w-[200px]" 
+        className="absolute w-[22vw] aspect-square max-w-[400px] min-w-[200px]" 
         style={{
-          background: '#2EB67D', // Slack green
+          background: '#93E3AB', // Slack green
           borderRadius: '50%',
           right: '-15vw',
-          top: '60vh',
+          top: '55vh',
         }}
       />
       
@@ -54,10 +54,10 @@ export default function AboutUs() {
 
           {/* Call-to-Action Buttons */}
           <div className="mt-8 flex space-x-4">
-            <a href="#learn-more" className="inline-block px-6 py-3 text-lg font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition duration-300">
+            <a href="#learn-more" className="inline-flex text-white bg-green-700 border-0 py-3 px-8 focus:outline-none hover:bg-green-600 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
               Learn More
             </a>
-            <a href="#get-started" className="inline-block px-6 py-3 text-lg font-semibold text-white bg-green-600 rounded-lg hover:bg-green-700 transition duration-300">
+            <a href="#get-started" className="inline-flex text-green-700 bg-white border-2 border-green-700 py-3 px-8 focus:outline-none hover:bg-gray-200 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
               Get Started
             </a>
           </div>

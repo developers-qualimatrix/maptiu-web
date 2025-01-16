@@ -19,9 +19,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        {/* Add Google Font link here */}
+      <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body className={inter.className}>
         <Header />
-        <main className="pt-16">{children}</main>
+        <main className="pt-4">{children}</main>
         <Footer />
       </body>
     </html>

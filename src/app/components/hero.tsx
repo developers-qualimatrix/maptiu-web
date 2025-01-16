@@ -1,110 +1,166 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { TypewriterEffect } from "./ui/typewriter-effect";
 
-// Remove dynamic import, use VideoPlayer directly
 export default function Hero() {
+  const words = [
+    {
+      text: "Connecting",
+    },
+    {
+      text: "Companies",
+    },
+    {
+      text: "with",
+      className: "leading-relaxed",
+    },
+    {
+      text: "Talent",
+    },
+    {
+      text: "Innovatively.",
+      className: "text-green-700 dark:text-green-700", // Adjusted text color to match the new theme
+    },
+  ];
   return (
-    <section
-      className="bg-white text-white m-4 py-12 rounded-lg md:py-20 h-[80vh] content-center items-center flex"
-      style={{
-        backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1550%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(163%2c 219%2c 178%2c 1)'%3e%3c/rect%3e%3cpath d='M0 0L195.73 0L0 158.05z' fill='rgba(255%2c 255%2c 255%2c .1)'%3e%3c/path%3e%3cpath d='M0 158.05L195.73 0L483.46000000000004 0L0 353z' fill='rgba(255%2c 255%2c 255%2c .075)'%3e%3c/path%3e%3cpath d='M0 353L483.46000000000004 0L615.6400000000001 0L0 388.65999999999997z' fill='rgba(255%2c 255%2c 255%2c .05)'%3e%3c/path%3e%3cpath d='M0 388.65999999999997L615.6400000000001 0L1134.2 0L0 457.58z' fill='rgba(255%2c 255%2c 255%2c .025)'%3e%3c/path%3e%3cpath d='M1440 560L1367.84 560L1440 442.59000000000003z' fill='rgba(0%2c 0%2c 0%2c .1)'%3e%3c/path%3e%3cpath d='M1440 442.59000000000003L1367.84 560L1212.31 560L1440 215.01000000000002z' fill='rgba(0%2c 0%2c 0%2c .075)'%3e%3c/path%3e%3cpath d='M1440 215.01L1212.31 560L830.66 560L1440 188.44z' fill='rgba(0%2c 0%2c 0%2c .05)'%3e%3c/path%3e%3cpath d='M1440 188.44L830.6600000000001 560L360.50000000000006 560L1440 77.50999999999999z' fill='rgba(0%2c 0%2c 0%2c .025)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1550'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e")`,
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-      }}
-    >
-      <div className="container mx-auto px-4 text-center my-auto w-3/4">
-        <h1 className="animate-slideUp delay-200 text-3xl text-[#0B151C] md:text-4xl lg:text-5xl font-bold mb-4">
-          Connecting Companies with Talent Innovatively
-        </h1>
-        <p className="animate-slideUp text-lg md:text-xl text-[#0B151C] mb-8">
-          Discover our innovative solutions for workforce management and talent acquisition
-        </p>
-        <div className="space-y-4 md:space-y-0 md:space-x-4">
-          <Link
-            href="/about-us"
-            className="animate-slideUp inline-block bg-white text-[#2A5F57] border hover:border-[#0B151C] px-6 py-2 rounded-full font-bold mb-2 md:mb-0"
-          >
-            Learn More
-          </Link>
-          <Link
-            href="/contact-us"
-            className="animate-slideUp inline-block text-[#0B151C] border-2 border-[#0B151C] px-6 py-2 rounded-full font-bold"
-          >
-            Get Started
-          </Link>
+    <section className="relative bg-[#A5DCB4] text-gray-800 py-8 md:py-16 lg:py-24 min-h-[90vh] flex items-center justify-center overflow-hidden">
+      {/* Circular Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-radial bg-gradient-to-br from-[#9FD6AE] via-[#d1e1d4] to-[#E7F2E9]" />
+
+      {/* Content Section */}
+      <div className="container mx-auto flex flex-col md:flex-row items-center px-4 md:px-5 py-8 md:py-24 relative z-10">
+        {/* Image Section */}
+        <div className="w-full md:w-1/2 lg:max-w-lg mb-8 md:mb-0">
+          <Image
+            className="object-cover object-center rounded-lg"
+            alt="Hero Animation"
+            src="/assets/InteractionDesignpana.png"
+            width={500}
+            height={400}
+          />
+        </div>
+
+        {/* Text Section */}
+        <div className="w-full md:w-1/2 lg:pl-24 flex flex-col items-center md:items-start text-center md:text-left">
+          <h1 className="title-font text-3xl sm:text-4xl md:text-5xl mb-6 font-bold text-gray-800 max-w-2xl mx-auto">
+            <TypewriterEffect words={words} className="text-3xl md:text-4xl lg:text-5xl" />
+          </h1>
+          <p className="mb-8 leading-relaxed text-gray-700 opacity-90 text-sm sm:text-base md:text-lg max-w-3xl mx-auto md:mx-0 animate-fadeIn">
+            Discover our innovative solutions for workforce management and
+            talent acquisition. Empower your business with our tailored tools
+            for a better workforce experience.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4 animate-fadeIn w-full">
+            <Link
+              href="/about-us"
+              aria-label="About Us"
+              className="inline-flex text-white bg-green-700 border-0 py-2 px-4 sm:px-6 focus:outline-none hover:bg-green-600 rounded-full text-sm sm:text-base md:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg w-full sm:w-auto justify-center"
+            >
+              Learn More
+            </Link>
+            <Link
+              href="/contact-us"
+              aria-label="Contact Us"
+              className="inline-flex text-green-700 bg-white border-2 border-green-700 py-2 px-4 sm:px-6 focus:outline-none hover:bg-gray-200 rounded-full text-sm sm:text-base md:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg w-full sm:w-auto justify-center"
+            >
+              Get Started
+            </Link>
+          </div>
         </div>
       </div>
-      <div className="container w-1/4 flex justify-center items-center">
-        {/* Video Component */}
-        <VideoPlayer src="/Hero_AnimationV.webm" width={400} height={400} />
-      </div>
+
+      {/* Animation Keyframes */}
       <style jsx>{`
-        @keyframes slideUp {
+        @keyframes fadeIn {
           0% {
-            transform: translateY(50px);
             opacity: 0;
+            transform: translateY(20px);
           }
           100% {
+            opacity: 1;
             transform: translateY(0);
-            opacity: 1;
           }
         }
 
-        .animate-slideUp {
-          animation: slideUp 1s ease-out forwards;
-          animation-delay: 1s;
-          animation-iteration-count: 1;
+        .animate-fadeIn {
+          animation: fadeIn 1s ease-in forwards;
         }
 
-        /* Add delay for each element to create staggered animations */
-        h1 {
-          animation-delay: 0.2s;
-        }
-        p {
-          animation-delay: 0.4s;
-        }
-        button {
-          animation-delay: 0.6s;
+        .animate-fadeIn:hover {
+          animation: none;
         }
 
-        /* Trigger animation every 5 seconds */
-        @keyframes repeatAnimation {
-          0% {
-            opacity: 0;
-          }
-          100% {
-            opacity: 1;
-          }
-        }
-
-        .animate-slideUp {
-          animation: slideUp 1s ease-out forwards,
-            repeatAnimation 10s 1s infinite;
+        @font-face {
+          font-family: "Montserrat", sans-serif;
         }
       `}</style>
     </section>
   );
 }
 
-// Define VideoPlayer component with proper types
-type VideoPlayerProps = {
-  src: string;
-  width: number;
-  height: number;
-};
 
-const VideoPlayer: React.FC<VideoPlayerProps> = ({ src, width, height }) => {
-  return (
-    <video
-      autoPlay
-      loop
-      muted
-      style={{ width, height }}
-      className="rounded-lg shadow-xl"
-    >
-      <source src={src} type="video/webm" />
-      Your browser does not support the video tag.
-    </video>
-  );
-};
+
+
+    // <section
+    //   classNameName="bg-gradient-to-r from-[#64B28D] via-[#3B9B68] to-[#2D6A47] w-full text-white py-16 rounded-lg md:py-24 h-[80vh] flex items-center  relative"
+    //   style={{ backgroundSize: "cover", backgroundRepeat: "no-repeat" }}
+    // >
+    //   <div classNameName="container px-4 w-full md:w-1/2 flex flex-col justify-start text-left">
+    //     <h1 classNameName="animate-slideUp text-4xl text-white md:text-5xl lg:text-6xl font-semibold mb-6">
+    //       Connecting Companies with Talent Innovatively
+    //     </h1>
+    //     <p classNameName="animate-slideUp text-lg md:text-xl text-white opacity-80 mb-10 max-w-3xl">
+    //       Discover our innovative solutions for workforce management and talent acquisition. Empower your business with our tailored tools for a better workforce experience.
+    //     </p>
+    //     <div classNameName="space-y-4 md:space-y-0 md:space-x-6 flex flex-col justify-center md:flex-row">
+    //       <Link
+    //         href="/about-us"
+    //         classNameName="animate-slideUp inline-block bg-white text-[#2D6A47] border border-transparent hover:border-[#0B151C] px-8 py-3 rounded-full font-semibold shadow-md transition-all ease-in-out duration-300 transform hover:scale-105"
+    //       >
+    //         Learn More
+    //       </Link>
+    //       <Link
+    //         href="/contact-us"
+    //         classNameName="animate-slideUp inline-block text-[#2D6A47] border-2 border-[#2D6A47] px-8 py-3 rounded-full font-semibold shadow-md transition-all ease-in-out duration-300 transform hover:scale-105"
+    //       >
+    //         Get Started
+    //       </Link>
+    //     </div>
+    //   </div>
+
+    //   <div classNameName="absolute right-0 w-1/4 flex justify-center items-center">
+    //     <div classNameName="relative w-full max-w-lg mx-auto">
+    //       <Image
+    //         src="/assets/InteractionDesignpana.png"
+    //         alt="Hero Animation"
+    //         classNameName="w-full rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-500"
+    //         width={500}
+    //         height={400}
+    //       />
+    //     </div>
+    //   </div>
+
+    //   <style jsx>{`
+    //     @keyframes slideUp {
+    //       0% {
+    //         transform: translateY(50px);
+    //         opacity: 0;
+    //       }
+    //       100% {
+    //         transform: translateY(0);
+    //         opacity: 1;
+    //       }
+    //     }
+
+    //     .animate-slideUp {
+    //       animation: slideUp 1s ease-out forwards;
+    //       animation-delay: 0.3s; /* Slight delay for smoother sequence */
+    //     }
+
+    //     /* Hover animation for buttons */
+    //     .animate-slideUp:hover {
+    //       animation: none; /* Prevent hover animations from triggering */
+    //     }
+    //   `}</style>
+    // </section>
