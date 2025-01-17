@@ -3,7 +3,6 @@ import ContactForm from "./components/ContactForm";
 import Hero from "./components/hero";
 import OurSolutions from "./components/OurSolutions";
 
-
 export default function Home() {
   return (
     <div className="flex flex-col">
@@ -18,5 +17,7 @@ export default function Home() {
         <ContactForm />
       </div>
     </div>
-  )
+  );
 }
+
+// console.log(hello)
