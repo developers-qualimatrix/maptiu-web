@@ -1,37 +1,21 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Navigation } from "@/components/navigation"
+import { fontSans, fontHeading } from "../lib/fonts"
+import { PageTransition } from "@/components/page-transition"
+import { Footer } from "@/components/footer"
 import './globals.css'
-import Header from './components/Header'
-import Footer from './components/Footer'
+import { Toaster } from "@/components/ui/toaster"
 
-
-const inter = Inter({ subsets: ['latin'] })
-
-export const metadata: Metadata = {
-  title: 'Maptiu - Connecting Companies with Talent Innovatively',
-  description: 'Maptiu bridges the gap between companies, talent, and resources, offering innovative solutions like SkillAccess, HireIt, and Resource Augmentation.',
-}
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <head>
-        {/* Add Google Font link here */}
-      <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body className={inter.className}>
-        <Header />
-        <main className="pt-4">{children}</main>
+      <body className={`min-h-screen ${fontSans.variable} ${fontHeading.variable} font-sans`}>
+        <Navigation />
+        <PageTransition>
+          <main>{children}</main>
+          <Toaster />
+        </PageTransition>
         <Footer />
       </body>
     </html>
   )
 }
-
