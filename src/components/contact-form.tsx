@@ -5,6 +5,7 @@ import { Card, CardContent } from "./ui/card"
 import { Input } from "./ui/input"
 import { Textarea } from "./ui/textarea"
 import { Button } from "./ui/button"
+import { toast } from "@/hooks/use-toast"
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -32,20 +33,31 @@ export function ContactForm() {
     try {
       // Attempt to send data to the Google Apps Script Web App
       await fetch(googleScriptUrl, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json', // Send the request with JSON format
-        },
-        mode: "no-cors",
-        body: JSON.stringify(formData), // Send the form data as JSON
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json', // Send the request with JSON format
+      },
+      mode: "no-cors",
+      body: JSON.stringify(formData), // Send the form data as JSON
       });
 
       // If successful, show a success message
-      alert('Form submitted successfully!');
-      
+      toast({
+      title: 'Success',
+      description: 'Form submitted successfully!',
+      variant: 'default',
+      duration: 5000,
+      className: 'bg-black text-white',
+      });
     } catch (error) {
       console.error('Error submitting form:', error);
-      alert('Error submitting form');
+      toast({
+      title: 'Error',
+      description: 'Error submitting form',
+      variant: 'destructive',
+      duration: 5000,
+      className: 'bg-black text-white',
+      });
     }
 
     // Reset the form after submission
@@ -60,7 +72,7 @@ export function ContactForm() {
   return (
     <Card className="w-full bg-white shadow-lg">
       <CardContent className="p-6">
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-4" autoComplete="off">
           <Input
             type="text"
             name="firstName"
