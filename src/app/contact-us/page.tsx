@@ -4,10 +4,12 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Mail, Phone, MapPin, Facebook, Twitter, LinkedinIcon as LinkedIn, Instagram } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { Badge } from "@/components/ui/badge"
+import { motion } from "framer-motion"
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-[#FFF5F0]">
+    <div className="min-h-screen bg-white">
       <section className="relative overflow-hidden bg-black py-20 pt-24 text-white md:py-32">
         <div className="absolute left-0 top-0 h-full w-full opacity-50">
           <Image
@@ -21,10 +23,15 @@ export default function ContactPage() {
         </div>
         <div className="container relative px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
-            <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl">Get in Touch</h1>
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
+              <Badge className="mb-4" variant="outline">
+                Contact Maptiu
+              </Badge>
+            <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl">Get in <span className="bg-gradient-to-r from-[#7ED957] to-[#7ED957] bg-clip-text text-transparent">Touch</span></h1>
             <p className="mt-6 text-xl text-zinc-400">
               Have questions? We&#39;d love to hear from you. Send us a message and we&#39;ll respond as soon as possible.
             </p>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -33,7 +40,7 @@ export default function ContactPage() {
         <div className="grid gap-12 lg:grid-cols-2">
           <div className="space-y-8">
             <h2 className="font-heading text-3xl">Contact Information</h2>
-            <Card className="bg-gradient-to-br from-[#FF4500] to-[#FF8C00] text-white rounded-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+            <Card className="bg-gradient-to-br from-[#083B73] to-[#083B73] text-white rounded-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
               <CardContent className="flex items-center gap-4 p-6">
                 <Mail className="h-8 w-8" />
                 <div>
@@ -42,7 +49,7 @@ export default function ContactPage() {
                 </div>
               </CardContent>
             </Card>
-            <Card className="bg-gradient-to-br from-[#FF4500] to-[#FF8C00] text-white rounded-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+            <Card className="bg-gradient-to-br from-[#083B73] to-[#083B73] text-white rounded-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
               <CardContent className="flex items-center gap-4 p-6">
                 <Phone className="h-8 w-8" />
                 <div>
@@ -51,7 +58,7 @@ export default function ContactPage() {
                 </div>
               </CardContent>
             </Card>
-            <Card className="bg-gradient-to-br from-[#FF4500] to-[#FF8C00] text-white rounded-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+            <Card className="bg-gradient-to-br from-[#083B73] to-[#083B73] text-white rounded-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
               <CardContent className="flex items-center gap-4 p-6">
                 <MapPin className="h-8 w-8" />
                 <div>
@@ -99,7 +106,7 @@ export default function ContactPage() {
                 className="bg-zinc-900 border-zinc-800 rounded-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
               >
                 <CardContent className="p-6">
-                  <h3 className="font-heading text-xl mb-2 text-[#FF4500]">{faq.question}</h3>
+                  <h3 className="font-heading text-xl mb-2 text-[#7ED957]">{faq.question}</h3>
                   <p className="text-zinc-400">{faq.answer}</p>
                 </CardContent>
               </Card>
@@ -168,7 +175,7 @@ export default function ContactPage() {
               { icon: Instagram, href: "https://instagram.com" },
             ].map((social, index) => (
               <Link key={index} href={social.href} target="_blank" rel="noopener noreferrer">
-                <social.icon className="h-8 w-8 text-[#FF4500] hover:text-[#FF4500]/80 transition-colors" />
+                <social.icon className="h-8 w-8 text-[#7ED957] hover:text-[#7ED957]/80 transition-colors" />
               </Link>
             ))}
           </div>

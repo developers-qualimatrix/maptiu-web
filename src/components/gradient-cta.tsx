@@ -15,10 +15,10 @@ export function GradientCTA() {
       viewport={{ once: true }}
       className="relative overflow-hidden rounded-3xl bg-black p-8 md:p-12"
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-[#FF4500]/10 to-[#FF8C00]/10 blur-3xl" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#7ED957]/10 to-[#7ED957]/10 blur-3xl" />
       <div className="relative flex flex-col items-center justify-between gap-6 text-center md:flex-row md:text-left">
         <div className="space-y-4">
-          <h2 className="bg-gradient-to-r from-[#FF4500] to-[#FF8C00] bg-clip-text font-heading text-3xl text-transparent sm:text-4xl md:text-5xl">
+          <h2 className="bg-gradient-to-r from-[#7ED957] to-[#7ED957] bg-clip-text font-heading text-3xl text-transparent sm:text-4xl md:text-5xl">
             You bring the talent,
             <br />
             we make it happen!
@@ -30,7 +30,7 @@ export function GradientCTA() {
         <Button
           asChild
           size="lg"
-          className="group relative overflow-hidden bg-gradient-to-r from-[#FF4500] to-[#FF8C00] transition-all hover:shadow-xl hover:shadow-[#FF4500]/20"
+          className="group relative overflow-hidden bg-gradient-to-r from-[#7ED957] to-[#7ED957] transition-all hover:shadow-xl hover:shadow-[#083B73]/20"
         >
           <Link href="/contact-us" className="flex items-center gap-2">
             Let&#39;s Talk
@@ -41,4 +41,3 @@ export function GradientCTA() {
     </motion.div>
   )
 }
-

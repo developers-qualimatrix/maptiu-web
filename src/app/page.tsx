@@ -1,6 +1,14 @@
 "use client"
 
-import { ArrowRight, Users, Target, Briefcase, Rocket, GraduationCap, School, User } from "lucide-react"
+import { ArrowRight,
+   Users, 
+   Target, 
+   Briefcase, 
+   Rocket, 
+  //  GraduationCap, 
+  //  School, 
+  //  User 
+  } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
@@ -12,7 +20,6 @@ import { ProductShowcase } from "@/components/product-showcase"
 import { Card, CardContent } from "@/components/ui/card"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import { GradientCTA } from "@/components/gradient-cta"
-
 
 export default function Home() {
   return (
@@ -37,7 +44,7 @@ export default function Home() {
               </Badge>
               <h1 className="font-heading text-4xl leading-tight sm:text-5xl md:text-6xl lg:text-7xl">
                 Connecting Companies with{" "}
-                <span className="bg-gradient-to-r from-[#FF4500] to-[#FF8C00] bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#7ED957] to-[#7ED957] bg-clip-text text-transparent">
                   Top Talent
                 </span>
               </h1>
@@ -51,7 +58,7 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="mt-8 flex flex-col justify-center gap-4 sm:flex-row"
             >
-              <Button size="lg" className="w-full sm:w-auto bg-[#FF4500] hover:bg-[#FF4500]/90 rounded-md" asChild>
+              <Button size="lg" className="w-full sm:w-auto bg-[#7ED957] hover:bg-[#7ED957]/90 rounded-md" asChild>
                 <Link href="/about-us">Get Started</Link>
               </Button>
               <Button
@@ -68,7 +75,7 @@ export default function Home() {
       </section>
 
       {/* ProcessFlow Section (Light) */}
-      <section className="bg-[#FFF5F0]">
+      <section className="bg-white">
         <ProcessFlow />
       </section>
 
@@ -76,7 +83,7 @@ export default function Home() {
       <WhyChooseUs />
 
       {/* ProductShowcase Section (Light) */}
-      <section className="bg-[#FFF5F0] py-12 md:py-24">
+      <section className="bg-white py-12 md:py-24">
         <div className="container px-4 sm:px-6 lg:px-8">
           <ProductShowcase />
         </div>
@@ -92,11 +99,11 @@ export default function Home() {
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
             >
-              <Badge className="mb-4 bg-[#FF4500] text-white">How It Works</Badge>
+              <Badge className="mb-4 bg-[#7ED957] hover:bg-[#7ED957] text-white">How It Works</Badge>
               <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl mb-4">We connect. You grow.</h2>
               <p className="mt-4 text-zinc-400 max-w-2xl mx-auto">
-                Our process is designed to be simple, efficient, and effective. Here&#39;s how we help you find the perfect
-                talent for your needs.
+                Our process is designed to be simple, efficient, and effective. Here&#39;s how we help you find the
+                perfect talent for your needs.
               </p>
             </motion.div>
           </div>
@@ -128,11 +135,11 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="relative overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 bg-zinc-900 border-zinc-800 h-full rounded-md">
+                <Card className="relative overflow-hidden transition-all duration-300 hover:border-[#7ED957] hover:shadow-xl hover:-translate-y-1 bg-zinc-900 border-zinc-800 h-full rounded-md">
                   <CardContent className="p-6">
-                    <div className="absolute right-2 top-2 text-6xl font-bold text-[#FF4500]/10">{step.number}</div>
+                    <div className="absolute right-2 top-2 text-6xl font-bold text-[#7ED957]/30">{step.number}</div>
                     <div className="mb-4">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#FF4500]">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#7ED957]">
                         <step.icon className="h-6 w-6 text-white" />
                       </div>
                     </div>
@@ -147,7 +154,7 @@ export default function Home() {
       </section>
 
       {/* Our Solutions Section (Light) */}
-      <section className="bg-[#FFF5F0] py-20 md:py-32">
+      <section className="bg-white py-20 md:py-32">
         <div className="container px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-[800px] text-center">
             <Badge className="mb-4">Our Solutions</Badge>
@@ -192,7 +199,7 @@ export default function Home() {
                   onClick={() => (window.location.href = service.href)}
                 >
                   {service.comingSoon && (
-                    <div className="absolute top-4 right-4 bg-[#FF4500] text-white px-2 py-1 rounded-full text-xs font-semibold z-10">
+                    <div className="absolute top-4 right-4 bg-[#083B73] text-white px-2 py-1 rounded-full text-xs font-semibold z-10">
                       Coming Soon
                     </div>
                   )}
@@ -204,10 +211,10 @@ export default function Home() {
                     className="object-cover"
                   />
                   <CardContent className="flex h-full flex-col p-6">
-                    <service.icon className="h-12 w-12 text-[#FF4500]" />
+                    <service.icon className="h-12 w-12 text-[#083B73]" />
                     <h3 className="mt-4 font-heading text-xl">{service.title}</h3>
                     <p className="mt-2 flex-1 text-muted-foreground">{service.description}</p>
-                    <div className="mt-4 flex items-center text-[#FF4500]">
+                    <div className="mt-4 flex items-center text-[#083B73]">
                       <Link href={service.href} className="flex items-center">
                         Learn more <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
@@ -221,7 +228,7 @@ export default function Home() {
       </section>
 
       {/* SkillAccess Overview Section */}
-      <section className="bg-black text-white py-20 md:py-32">
+      {/* <section className="bg-black text-white py-20 md:py-32">
         <div className="container px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <Badge className="mb-4">SkillAccess Platform</Badge>
@@ -238,9 +245,12 @@ export default function Home() {
               { icon: User, title: "Students", description: "Take assessments and connect with opportunities" },
               { icon: Briefcase, title: "Companies", description: "Access pre-vetted talent pool" },
             ].map((item, index) => (
-              <Card key={index} className="bg-zinc-900 border-zinc-800 text-white relative overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+              <Card
+                key={index}
+                className="bg-zinc-900 border-zinc-800 text-white relative overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+              >
                 <CardContent className="p-6 flex flex-col items-center text-center">
-                  <item.icon className="h-12 w-12 text-[#FF4500] mb-4" />
+                  <item.icon className="h-12 w-12 text-[#083B73] mb-4" />
                   <h3 className="font-heading text-xl mb-2">{item.title}</h3>
                   <p className="text-sm text-zinc-400">{item.description}</p>
                 </CardContent>
@@ -248,18 +258,18 @@ export default function Home() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <Button size="lg" className="bg-[#FF4500] hover:bg-[#FF4500]/90" asChild>
+            <Button size="lg" className="bg-[#083B73] hover:bg-[#083B73]/90" asChild>
               <Link href="/skill-access">Learn More About SkillAccess</Link>
             </Button>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Testimonials Section (Dark) */}
       <section className="bg-black text-white py-20 md:py-32">
         <div className="container px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-[800px] text-center">
-            <Badge className="mb-4">Testimonials</Badge>
+            <Badge className="mb-4 bg-[#7ED957] hover:bg-[#7ED957]">Testimonials</Badge>
             <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl">What our clients say</h2>
             <p className="mt-4 text-zinc-400">Don&#39;t just take our word for it</p>
           </div>
@@ -318,8 +328,8 @@ export default function Home() {
                 ))}
               </CarouselContent>
               <div className="flex justify-center gap-2 mt-8">
-                <CarouselPrevious className="relative translate-y-0 bg-[#FF4500] hover:bg-[#FF4500]/90 text-white" />
-                <CarouselNext className="relative translate-y-0 bg-[#FF4500] hover:bg-[#FF4500]/90 text-white" />
+                <CarouselPrevious className="relative translate-y-0 bg-[#7ED957] hover:bg-[#7ED957]/90 text-white" />
+                <CarouselNext className="relative translate-y-0 bg-[#7ED957] hover:bg-[#7ED957]/90 text-white" />
               </div>
             </Carousel>
           </div>
@@ -327,40 +337,12 @@ export default function Home() {
       </section>
 
       {/* GradientCTA Section (Light) */}
-      <section className="bg-[#FFF5F0] py-12 md:py-24">
+      <section className="bg-white py-12 md:py-24">
         <div className="container px-4 sm:px-6 lg:px-8">
           <GradientCTA />
         </div>
       </section>
-
-      {/* Final CTA Section (Dark) */}
-      {/* <section className="bg-black text-white py-20 md:py-32">
-        <div className="container px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-[800px] text-center">
-            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl">Ready to transform your hiring?</h2>
-            <p className="mt-4 text-zinc-400">Get started with Maptiu today and see the difference.</p>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="mt-8 flex flex-col justify-center gap-4 sm:flex-row"
-            >
-              <Button size="lg" className="w-full sm:w-auto bg-[#FF4500] hover:bg-[#FF4500]/90 rounded-md" asChild>
-                <Link href="/contact-us">Get Started</Link>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="w-full sm:w-auto border-white/30 text-white hover:bg-white/20 rounded-md"
-                asChild
-              >
-                <Link href="/contact-us">Book a Call</Link>
-              </Button>
-            </motion.div>
-          </div>
-        </div>
-      </section> */}
     </div>
-  );
+  )
 }
 
