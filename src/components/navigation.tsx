@@ -93,7 +93,7 @@ export function Navigation() {
             </Button>
             <Sheet>
               <SheetTrigger asChild>
-                <Button variant="ghost" className="lg:hidden" size="icon">
+                <Button variant="ghost" className="lg:hidden bg-[#083B73]" size="icon">
                   <Menu className="h-5 w-5 text-white" />
                   <span className="sr-only">Toggle navigation menu</span>
                 </Button>
