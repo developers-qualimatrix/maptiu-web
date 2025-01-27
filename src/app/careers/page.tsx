@@ -5,17 +5,20 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import Image from "next/image"
 import { Briefcase, Users, Zap, Heart, Globe, Coffee } from "lucide-react"
+import { motion } from "framer-motion"
 
 export default function CareersPage() {
   return (
-    <div className="min-h-screen bg-[#FFF5F0]">
-      <section className="container py-24 pt-24 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-white">
+      <section className="relative overflow-hidden bg-black py-20 pt-24 text-white md:py-32">
         <div className="mx-auto max-w-3xl text-center">
-          <Badge className="mb-4">Careers at Maptiu</Badge>
-          <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl">Join Our Team</h1>
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
+          <Badge className="mb-4" variant={"outline"}>Careers at Maptiu</Badge>
+          <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl">Join Our <span className="bg-gradient-to-r from-[#7ED957] to-[#7ED957] bg-clip-text text-transparent">Team</span></h1>
           <p className="mt-6 text-xl text-muted-foreground">
             Be part of a team that&#39;s revolutionizing the future of work.
           </p>
+          </motion.div>
         </div>
       </section>
 
@@ -44,7 +47,7 @@ export default function CareersPage() {
               className="bg-white rounded-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
             >
               <CardContent className="p-6">
-                <item.icon className="h-12 w-12 text-[#FF4500] mb-4" />
+                <item.icon className="h-12 w-12 text-[#083B73] mb-4" />
                 <h3 className="font-heading text-xl mb-2">{item.title}</h3>
                 <p className="text-muted-foreground">{item.description}</p>
               </CardContent>
@@ -53,7 +56,8 @@ export default function CareersPage() {
         </div>
       </section>
 
-      <section className="container py-12 md:py-24 px-4 sm:px-6 lg:px-8 bg-black text-white">
+      {/* Our Values */}
+      {/* <section className="container py-12 md:py-24 px-4 sm:px-6 lg:px-8 bg-black text-white">
         <h2 className="text-center font-heading text-3xl mb-8">Our Values</h2>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {[
@@ -63,12 +67,12 @@ export default function CareersPage() {
             { value: "Excellence", description: "We strive for the highest quality in everything we do" },
           ].map((item, index) => (
             <div key={index} className="text-center">
-              <h3 className="font-heading text-xl mb-2 text-[#FF4500]">{item.value}</h3>
+              <h3 className="font-heading text-xl mb-2 text-[#083B73]">{item.value}</h3>
               <p className="text-zinc-400">{item.description}</p>
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       <section className="container py-12 md:py-24 px-4 sm:px-6 lg:px-8">
         <h2 className="text-center font-heading text-3xl mb-8">Current Openings</h2>
@@ -109,7 +113,7 @@ export default function CareersPage() {
                     <Badge variant="secondary">{job.type}</Badge>
                   </div>
                 </div>
-                <Button style={{ backgroundColor: "#FF4500" }} className="rounded-md">
+                <Button style={{ backgroundColor: "#083B73" }} className="rounded-md">
                   Apply Now
                 </Button>
               </CardContent>
@@ -118,8 +122,8 @@ export default function CareersPage() {
         </div>
       </section>
 
-      <section className="container py-12 md:py-24 px-4 sm:px-6 lg:px-8 bg-[#FFF5F0]">
-        <h2 className="text-center font-heading text-3xl mb-8">Employee Benefits</h2>
+      <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-16 bg-black">
+        <h2 className="text-center font-heading text-3xl mb-8 text-white">Employee Benefits</h2>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {[
             { title: "Competitive Salary", icon: Briefcase },
@@ -130,8 +134,8 @@ export default function CareersPage() {
             { title: "Stock Options", icon: Zap },
           ].map((benefit, index) => (
             <div key={index} className="flex items-center space-x-4">
-              <benefit.icon className="h-8 w-8 text-[#FF4500]" />
-              <span className="text-lg">{benefit.title}</span>
+              <benefit.icon className="h-8 w-8 text-[#7ED957]" />
+              <span className="text-lg text-white">{benefit.title}</span>
             </div>
           ))}
         </div>
@@ -189,7 +193,7 @@ export default function CareersPage() {
           <div className="mx-auto max-w-[800px] text-center">
             <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl">Ready to make an impact?</h2>
             <p className="mt-4 text-zinc-400">Join Maptiu and help shape the future of talent acquisition.</p>
-            <Button size="lg" className="mt-8 bg-[#FF4500] hover:bg-[#FF4500]/90 rounded-md">
+            <Button size="lg" className="mt-8 bg-[#7ED957] hover:bg-[#7ED957]/90 rounded-md">
               View All Openings
             </Button>
           </div>
