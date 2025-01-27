@@ -12,30 +12,30 @@ export function ProcessFlow() {
       title: "Swift Response",
       description:
         "We respond to your talent needs within 24 hours, ensuring no time is wasted in your hiring process.",
-      gradient: "from-[#FF4500] to-[#FF8C00]",
+      gradient: "from-[#083B73] to-[#083B73]",
     },
     {
       icon: Target,
       title: "Precise Matching",
       description: "Our AI-driven platform analyzes requirements to find the perfect candidate matches for your needs.",
-      gradient: "from-[#FF4500] to-[#FF8C00]",
+      gradient: "from-[#083B73] to-[#083B73]",
     },
     {
       icon: Users,
       title: "Expert Screening",
       description: "Our recruitment experts conduct thorough assessments to ensure quality candidates.",
-      gradient: "from-[#FF4500] to-[#FF8C00]",
+      gradient: "from-[#083B73] to-[#083B73]",
     },
     {
       icon: Rocket,
       title: "Quick Deployment",
       description: "Streamlined onboarding process gets your new talent operational in record time.",
-      gradient: "from-[#FF4500] to-[#FF8C00]",
+      gradient: "from-[#083B73] to-[#083B73]",
     },
   ]
 
   return (
-    <section className="relative overflow-hidden bg-[#FFF5F0] py-24">
+    <section className="relative overflow-hidden bg-white py-24">
       <div className="container relative px-4 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-2">
           {/* Left Column - Text */}
@@ -46,12 +46,12 @@ export function ProcessFlow() {
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
             >
-              <Badge variant="outline" className="border-[#FF4500] text-[#FF4500]">
+              <Badge variant="outline" className="border-[#083B73] text-white bg-[#083B73]">
                 Our Process Flow
               </Badge>
               <h2 className="mt-6 font-heading text-4xl leading-tight text-black sm:text-5xl lg:text-6xl">
                 We are a{" "}
-                <span className="bg-gradient-to-r from-[#FF4500] to-[#FF8C00] bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#083B73] to-[#083B73] bg-clip-text text-transparent">
                   talent solutions
                 </span>{" "}
                 agency that combines expertise with technology.
@@ -73,12 +73,12 @@ export function ProcessFlow() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="group relative overflow-hidden bg-white border-[#FF4500]/10 transition-all duration-300 hover:border-[#FF4500]/50 hover:shadow-lg hover:shadow-[#FF4500]/10 hover:-translate-y-1 rounded-md">
+                <Card className="group relative overflow-hidden bg-white border-[#083B73]/10 transition-all duration-300 hover:border-[#083B73]/50 hover:shadow-lg hover:shadow-[#083B73]/10 hover:-translate-y-1 rounded-md">
                   <CardContent className="p-6">
-                    <div className={`flex h-12 w-12 items-center justify-center rounded-lg bg-[#FF4500]`}>
+                    <div className={`flex h-12 w-12 items-center justify-center rounded-lg bg-[#083B73]`}>
                       <process.icon className="h-6 w-6 text-white" />
                     </div>
-                    <h3 className="font-heading text-xl text-black">{process.title}</h3>
+                    <h3 className="font-heading text-xl text-[#083B73]">{process.title}</h3>
                     <p className="mt-2 text-sm text-muted-foreground">{process.description}</p>
                   </CardContent>
                 </Card>
@@ -90,4 +90,3 @@ export function ProcessFlow() {
     </section>
   )
 }
-
