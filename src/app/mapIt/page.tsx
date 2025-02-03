@@ -18,13 +18,13 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 
-export default function SkillAccessPage() {
+export default function MapItPage() {
   return (
     <div className="min-h-screen bg-white">
       <section className="container mx-auto py-24 pt-24 px-4 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-24 items-center">
           <div className="flex flex-col justify-center">
-            <Badge className="w-fit mb-4">SkillAccess Platform</Badge>
+            <Badge className="w-fit mb-4">Mapit Platform</Badge>
             <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl mb-6">
               AI-Driven Talent Acquisition for Universities, Colleges, and
               Corporates
@@ -54,7 +54,7 @@ export default function SkillAccessPage() {
           <div className="relative mt-8 lg:mt-0">
             <div className="absolute -left-4 top-4 h-72 w-72 rounded-full bg-[#083B73]/10 lg:-left-8" />
             <Image
-              src="/assets/skillAccess.png"
+              src="/assets/skillaccess.png"
               alt="SkillAccess Platform Interface"
               width={600}
               height={400}
@@ -216,7 +216,7 @@ export default function SkillAccessPage() {
               className="bg-[#083B73] hover:bg-[#083B73]/90"
               asChild
             >
-              <Link href="/skill-access">Learn More About SkillAccess</Link>
+              <Link href="/mapIt">Learn More About SkillAccess</Link>
             </Button>
           </div>
         </div>

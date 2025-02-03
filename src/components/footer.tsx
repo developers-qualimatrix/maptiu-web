@@ -33,10 +33,10 @@ export function Footer() {
             <h3 className="font-heading text-lg">Solutions</h3>
             <nav className="mt-4 flex flex-col space-y-2">
               <Link
-                href="/skill-access"
+                href="/mapIt"
                 className="text-sm text-zinc-400 transition-colors duration-200 hover:text-white"
               >
-                SkillAccess
+                MapIt
               </Link>
               <Link
                 href="/hire-it"
@@ -45,10 +45,10 @@ export function Footer() {
                 HireIt
               </Link>
               <Link
-                href="/resource-augmentation"
+                href="/staffIt"
                 className="text-sm text-zinc-400 transition-colors duration-200 hover:text-white"
               >
-                Resource Augmentation
+                StaffIt
               </Link>
             </nav>
           </div>

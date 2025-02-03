@@ -86,7 +86,7 @@ export default function Home() {
                 className="w-full sm:w-auto border-white/30 text-white hover:bg-white/20 rounded-md"
                 asChild
               >
-                <Link href="/contact-us">Book a Call</Link>
+                <Link href="https://calendly.com/hrishiraj">Book a Call</Link>
               </Button>
             </motion.div>
           </div>
@@ -199,11 +199,11 @@ export default function Home() {
           <div className="mt-16 grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
-                title: "SkillAccess",
+                title: "MapIt",
                 description:
                   "AI-driven platform connecting universities, colleges, students, and companies",
                 icon: Users,
-                href: "/skill-access",
+                href: "/mapIt",
                 image: "/assets/skillaccess_test.webp",
               },
               {
@@ -216,11 +216,11 @@ export default function Home() {
                 comingSoon: true,
               },
               {
-                title: "Resource Augmentation",
+                title: "StaffIt",
                 description:
                   "Flexible and scalable workforce solutions for your business",
                 icon: Briefcase,
-                href: "/resource-augmentation",
+                href: "/staffIt",
                 image: "/assets/resource_augmentation_test.webp",
                 comingSoon: true,
               },
@@ -301,7 +301,7 @@ export default function Home() {
           </div>
           <div className="text-center mt-12">
             <Button size="lg" className="bg-[#083B73] hover:bg-[#083B73]/90" asChild>
-              <Link href="/skill-access">Learn More About SkillAccess</Link>
+              <Link href="/mapIt">Learn More About SkillAccess</Link>
             </Button>
           </div>
         </div>
