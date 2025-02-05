@@ -1,16 +1,16 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Users, Target, Heart, Lightbulb, Rocket, Globe } from "lucide-react"
-import Image from "next/image"
-import { motion } from "framer-motion"
-import Link from "next/link"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Users, Target, Heart, Lightbulb, Rocket, Globe } from "lucide-react";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-[#FFF5F0]">
+    <div className="min-h-screen bg-white">
       <section className="relative overflow-hidden bg-black py-20 pt-24 text-white md:py-32">
         <div className="absolute left-0 top-0 h-full w-full opacity-50">
           <Image
@@ -24,16 +24,23 @@ export default function AboutPage() {
         </div>
         <div className="container relative px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
               <Badge className="mb-4" variant="outline">
                 About Maptiu
               </Badge>
               <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl">
                 Transforming the Future of{" "}
-                <span className="bg-gradient-to-r from-[#FF4500] to-[#FF8C00] bg-clip-text text-transparent">Work</span>
+                <span className="bg-gradient-to-r from-[#7ED957] to-[#7ED957] bg-clip-text text-transparent">
+                  Work
+                </span>
               </h1>
               <p className="mt-6 text-xl text-zinc-400">
-                We&#39;re on a mission to revolutionize how companies connect with talent and manage their workforce.
+                We&#39;re on a mission to revolutionize how companies connect
+                with talent and manage their workforce.
               </p>
             </motion.div>
           </div>
@@ -50,24 +57,31 @@ export default function AboutPage() {
           >
             <Card className="relative overflow-hidden h-full rounded-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
               <CardContent className="p-8">
-                <div className="absolute right-0 top-0 h-32 w-32 -translate-y-8 translate-x-8 rounded-full bg-[#FF4500]/10" />
+                <div className="absolute right-0 top-0 h-32 w-32 -translate-y-8 translate-x-8 rounded-full bg-[#083B73]/65" />
                 <h2 className="font-heading text-2xl">Our Vision</h2>
                 <p className="mt-4 text-muted-foreground">
-                  To be the leading partner in workforce solutions and talent acquisition, setting new standards for
-                  innovation and excellence. We envision a future where:
+                  To be the leading partner in workforce solutions and talent
+                  acquisition, setting new standards for innovation and
+                  excellence. We envision a future where:
                 </p>
                 <ul className="mt-4 space-y-4">
                   <li className="flex items-start gap-3">
-                    <Target className="h-6 w-6 text-[#FF4500] shrink-0" />
-                    <span>Every company has access to the perfect talent match</span>
+                    <Target className="h-6 w-6 text-[#083B73] shrink-0" />
+                    <span>
+                      Every company has access to the perfect talent match
+                    </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Globe className="h-6 w-6 text-[#FF4500] shrink-0" />
-                    <span>Geographic boundaries no longer limit career opportunities</span>
+                    <Globe className="h-6 w-6 text-[#083B73] shrink-0" />
+                    <span>
+                      Geographic boundaries no longer limit career opportunities
+                    </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Rocket className="h-6 w-6 text-[#FF4500] shrink-0" />
-                    <span>Innovation drives continuous improvement in recruitment</span>
+                    <Rocket className="h-6 w-6 text-[#083B73] shrink-0" />
+                    <span>
+                      Innovation drives continuous improvement in recruitment
+                    </span>
                   </li>
                 </ul>
               </CardContent>
@@ -82,24 +96,31 @@ export default function AboutPage() {
           >
             <Card className="relative overflow-hidden h-full rounded-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
               <CardContent className="p-8">
-                <div className="absolute right-0 top-0 h-32 w-32 -translate-y-8 translate-x-8 rounded-full bg-[#FF4500]/10" />
+                <div className="absolute right-0 top-0 h-32 w-32 -translate-y-8 translate-x-8 rounded-full bg-[#083B73]/65" />
                 <h2 className="font-heading text-2xl">Our Mission</h2>
                 <p className="mt-4 text-muted-foreground">
-                  Bridging the gap between companies and talent through innovative solutions that empower growth and
-                  success. We achieve this by:
+                  Bridging the gap between companies and talent through
+                  innovative solutions that empower growth and success. We
+                  achieve this by:
                 </p>
                 <ul className="mt-4 space-y-4">
                   <li className="flex items-start gap-3">
-                    <Users className="h-6 w-6 text-[#FF4500] shrink-0" />
-                    <span>Building lasting partnerships with clients and candidates</span>
+                    <Users className="h-6 w-6 text-[#083B73] shrink-0" />
+                    <span>
+                      Building lasting partnerships with clients and candidates
+                    </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Lightbulb className="h-6 w-6 text-[#FF4500] shrink-0" />
-                    <span>Leveraging cutting-edge technology for better matches</span>
+                    <Lightbulb className="h-6 w-6 text-[#083B73] shrink-0" />
+                    <span>
+                      Leveraging cutting-edge technology for better matches
+                    </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Heart className="h-6 w-6 text-[#FF4500] shrink-0" />
-                    <span>Maintaining a people-first approach in everything we do</span>
+                    <Heart className="h-6 w-6 text-[#083B73] shrink-0" />
+                    <span>
+                      Maintaining a people-first approach in everything we do
+                    </span>
                   </li>
                 </ul>
               </CardContent>
@@ -111,26 +132,32 @@ export default function AboutPage() {
       <section className="container py-12 md:py-24 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <Badge>Our Culture</Badge>
-          <h2 className="mt-4 font-heading text-3xl sm:text-4xl">Building Tomorrow&#39;s Workforce Today</h2>
+          <h2 className="mt-4 font-heading text-3xl sm:text-4xl">
+            Building Tomorrow&#39;s Workforce Today
+          </h2>
           <p className="mt-4 text-muted-foreground">
-            Our culture is built on innovation, collaboration, and a commitment to excellence.
+            Our culture is built on innovation, collaboration, and a commitment
+            to excellence.
           </p>
         </div>
         <div className="mt-12 grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {[
             {
               title: "Innovation First",
-              description: "We embrace new technologies and methodologies to stay ahead of industry trends.",
+              description:
+                "We embrace new technologies and methodologies to stay ahead of industry trends.",
               image: "/assets/innovation_first.jpg",
             },
             {
               title: "Global Mindset",
-              description: "Our diverse team brings perspectives from around the world to solve complex challenges.",
+              description:
+                "Our diverse team brings perspectives from around the world to solve complex challenges.",
               image: "/assets/global_mindset.png",
             },
             {
               title: "People-Centric",
-              description: "We believe in creating lasting relationships built on trust and mutual success.",
+              description:
+                "We believe in creating lasting relationships built on trust and mutual success.",
               image: "/assets/people_centric.jpg",
             },
           ].map((item, index) => (
@@ -151,7 +178,9 @@ export default function AboutPage() {
                 />
                 <CardContent className="p-6">
                   <h3 className="font-heading text-xl">{item.title}</h3>
-                  <p className="mt-2 text-muted-foreground">{item.description}</p>
+                  <p className="mt-2 text-muted-foreground">
+                    {item.description}
+                  </p>
                 </CardContent>
               </Card>
             </motion.div>
@@ -162,8 +191,12 @@ export default function AboutPage() {
       <section className="container py-12 md:py-24 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <Badge>Work Process</Badge>
-          <h2 className="mt-4 font-heading text-3xl sm:text-4xl">We design. You grow</h2>
-          <p className="mt-4 text-muted-foreground">Our process is as simple as possible.</p>
+          <h2 className="mt-4 font-heading text-3xl sm:text-4xl">
+            We design. You grow
+          </h2>
+          <p className="mt-4 text-muted-foreground">
+            Our process is as simple as possible.
+          </p>
         </div>
         <div className="mt-16 grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {[
@@ -210,10 +243,14 @@ export default function AboutPage() {
               )}
               <Card className="relative overflow-hidden rounded-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                 <CardContent className="p-6">
-                  <div className="absolute right-2 top-2 text-6xl font-bold text-muted/10">{step.number}</div>
-                  <step.icon className="h-12 w-12 text-[#FF4500]" />
+                  <div className="absolute right-2 top-2 text-6xl font-bold text-muted/10">
+                    {step.number}
+                  </div>
+                  <step.icon className="h-12 w-12 text-[#083B73]" />
                   <h3 className="mt-4 font-heading text-xl">{step.title}</h3>
-                  <p className="mt-2 text-muted-foreground">{step.description}</p>
+                  <p className="mt-2 text-muted-foreground">
+                    {step.description}
+                  </p>
                 </CardContent>
               </Card>
             </motion.div>
@@ -224,19 +261,29 @@ export default function AboutPage() {
       <section className="container py-12 md:py-24 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <Badge>Join Us</Badge>
-          <h2 className="mt-4 font-heading text-3xl sm:text-4xl">Ready to Transform Your Business?</h2>
-          <p className="mt-4 text-muted-foreground">Partner with us and experience the future of talent acquisition.</p>
+          <h2 className="mt-4 font-heading text-3xl sm:text-4xl">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="mt-4 text-muted-foreground">
+            Partner with us and experience the future of talent acquisition.
+          </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row justify-center">
-            <Button size="lg" className="w-full sm:w-auto bg-[#FF4500] hover:bg-[#FF4500]/90 rounded-md">
+            <Button
+              size="lg"
+              className="w-full sm:w-auto bg-[#083B73] hover:bg-[#083B73]/90 rounded-md"
+            >
               <Link href="/contact-us">Get Started</Link>
             </Button>
-            <Button size="lg" variant="outline" className="w-full sm:w-auto rounded-md">
-            <Link href="/contact-us">Learn More</Link>
+            <Button
+              size="lg"
+              variant="outline"
+              className="w-full sm:w-auto rounded-md"
+            >
+              <Link href="/contact-us">Learn More</Link>
             </Button>
           </div>
         </div>
       </section>
     </div>
-  )
+  );
 }
-

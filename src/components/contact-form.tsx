@@ -80,7 +80,7 @@ export function ContactForm() {
             value={formData.firstName}
             onChange={handleChange}
             required
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#FF4500] focus:border-[#FF4500] block w-full p-2.5"
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#083B73] focus:border-[#083B73] block w-full p-2.5"
           />
           <Input
             type="email"
@@ -89,7 +89,7 @@ export function ContactForm() {
             value={formData.email}
             onChange={handleChange}
             required
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#FF4500] focus:border-[#FF4500] block w-full p-2.5"
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#083B73] focus:border-[#083B73] block w-full p-2.5"
           />
           <Input
             type="tel"
@@ -98,7 +98,7 @@ export function ContactForm() {
             value={formData.phone}
             onChange={handleChange}
             required
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#FF4500] focus:border-[#FF4500] block w-full p-2.5"
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#083B73] focus:border-[#083B73] block w-full p-2.5"
           />
           <Textarea
             name="description"
@@ -107,11 +107,11 @@ export function ContactForm() {
             onChange={handleChange}
             rows={5}
             required
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#FF4500] focus:border-[#FF4500] block w-full p-2.5"
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#083B73] focus:border-[#083B73] block w-full p-2.5"
           />
           <Button
             type="submit"
-            className="w-full bg-gradient-to-r from-[#FF4500] to-[#FF8C00] hover:from-[#FF4500]/90 hover:to-[#FF8C00]/90 text-white font-bold py-2 px-4 rounded-lg transition-all duration-200"
+            className="w-full bg-gradient-to-r from-[#083B73] to-[#083B73] hover:from-[#083B73]/90 hover:to-[#FF8C00]/90 text-white font-bold py-2 px-4 rounded-lg transition-all duration-200"
           >
             Submit
           </Button>
