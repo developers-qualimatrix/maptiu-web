@@ -97,6 +97,13 @@ export function Navigation() {
                   </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
+                  <Link href="/leadership" legacyBehavior passHref>
+                    <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-base font-medium text-black transition-colors hover:bg-white/10 hover:text-[#083B73] focus:text-[#083B73]">
+                      Leaders
+                    </NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
                   <Link href="/contact-us" legacyBehavior passHref>
                     <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-base font-medium text-black transition-colors hover:bg-white/10 hover:text-[#083B73] focus:text-[#083B73]">
                       Contact
@@ -108,13 +115,13 @@ export function Navigation() {
           </div>
 
           <div className="flex items-center space-x-4">
-            <Button
+            {/* <Button
               variant="ghost"
               className="hidden text-[#083B73]  hover:text-black hover:bg-white lg:inline-flex"
               asChild
             >
               <Link href="/about-us">Learn More</Link>
-            </Button>
+            </Button> */}
             <Button
               className="hidden bg-[#083B73] text-white hover:bg-[#083B73]/90 lg:inline-flex"
               asChild
@@ -166,6 +173,12 @@ export function Navigation() {
                     className="text-lg font-medium text-white hover:text-[#083B73]"
                   >
                     Careers
+                  </Link>
+                  <Link
+                    href="/leadership"
+                    className="text-lg font-medium text-white hover:text-[#083B73]"
+                  >
+                    Leaders
                   </Link>
                   <Link
                     href="/contact-us"

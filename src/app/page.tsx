@@ -1,7 +1,6 @@
 "use client";
 
 import {
-  ArrowRight,
   Users,
   Target,
   Briefcase,
@@ -256,11 +255,11 @@ export default function Home() {
                     <p className="mt-2 flex-1 text-sm sm:text-base text-muted-foreground">
                       {service.description}
                     </p>
-                    <div className="mt-4 flex items-center text-[#083B73]">
+                    {/* <div className="mt-4 flex items-center text-[#083B73]">
                       <Link href={service.href} className="flex items-center">
                         Learn more <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
-                    </div>
+                    </div> */}
                   </CardContent>
                 </Card>
               </motion.div>

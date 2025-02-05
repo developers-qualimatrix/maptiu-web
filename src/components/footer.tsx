@@ -70,6 +70,12 @@ export function Footer() {
                 Careers
               </Link>
               <Link
+                href="/leadership"
+                className="text-sm text-zinc-400 transition-colors duration-200 hover:text-white"
+              >
+                Leaders
+              </Link>
+              <Link
                 href="/contact-us"
                 className="text-sm text-zinc-400 transition-colors duration-200 hover:text-white"
               >
