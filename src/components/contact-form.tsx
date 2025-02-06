@@ -111,7 +111,7 @@ export function ContactForm() {
           />
           <Button
             type="submit"
-            className="w-full bg-gradient-to-r from-[#083B73] to-[#083B73] hover:from-[#083B73]/90 hover:to-[#FF8C00]/90 text-white font-bold py-2 px-4 rounded-lg transition-all duration-200"
+            className="w-full bg-gradient-to-r from-[#083B73] to-[#083B73] hover:from-[#083B73]/90 hover:to-[#083B73]/90 text-white font-bold py-2 px-4 rounded-lg transition-all duration-200"
           >
             Submit
           </Button>
