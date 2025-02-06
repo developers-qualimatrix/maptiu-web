@@ -132,9 +132,9 @@ const CultureTabs: React.FC = () => {
 
                 <span className="inline-block h-1 w-10 rounded bg-green-500 mt-1 mb-1"></span>
 
-                <h2 className="text-gray-800 font-medium title-font tracking-wider text-sm sm:text-base">
+                {/* <h2 className="text-gray-800 font-medium title-font tracking-wider text-sm sm:text-base">
                   {tab.empName}
-                </h2>
+                </h2> */}
                 <p className="text-gray-500 text-xs sm:text-sm">{tab.empPosition}</p>
               </div>
             </div>

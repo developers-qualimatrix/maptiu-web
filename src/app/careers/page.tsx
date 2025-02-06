@@ -11,32 +11,36 @@ import Link from "next/link";
 export default function CareersPage() {
   return (
     <div className="min-h-screen bg-white">
-      <section className="relative overflow-hidden bg-black py-20 pt-24 text-white md:py-32 md:pt-36">
-        <div className="mx-auto max-w-3xl text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <Badge className="mb-4" variant={"outline"}>
-              Careers at Maptiu
-            </Badge>
-            <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl">
-              Join Our{" "}
-              <span className="bg-gradient-to-r from-[#7ED957] to-[#7ED957] bg-clip-text text-transparent">
-                Team
-              </span>
-            </h1>
-            <p className="mt-6 text-xl text-muted-foreground">
-              Be part of a team that&#39;s revolutionizing the future of work.
-            </p>
-          </motion.div>
+      <section className="relative overflow-hidden bg-black py-20 sm:py-24 md:py-28 lg:py-32 lg:pt-36 text-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <Badge className="mb-4 sm:mb-6" variant="outline">
+                Careers at Maptiu
+              </Badge>
+              <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 sm:mb-6">
+                Join Our{" "}
+                <span className="bg-gradient-to-r from-[#7ED957] to-[#7ED957] bg-clip-text text-transparent">
+                  Team
+                </span>
+              </h1>
+              <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground">
+                Be part of a team that&apos;s revolutionizing the future of work.
+              </p>
+            </motion.div>
+          </div>
         </div>
       </section>
 
-      <section className="container py-12 md:py-24 px-4 sm:px-6 lg:px-8">
-        <h2 className="text-center font-heading text-3xl mb-8">Why Join Us</h2>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <section className="container py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
+        <h2 className="text-center font-heading text-2xl sm:text-3xl md:text-4xl mb-8 sm:mb-12">
+          Why Join Us
+        </h2>
+        <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
           {[
             {
               title: "Innovation-Driven",
@@ -59,174 +63,112 @@ export default function CareersPage() {
           ].map((item, index) => (
             <Card
               key={index}
-              className="bg-white rounded-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              className="bg-white rounded-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
             >
-              <CardContent className="p-6">
-                <item.icon className="h-12 w-12 text-[#083B73] mb-4" />
-                <h3 className="font-heading text-xl mb-2">{item.title}</h3>
-                <p className="text-muted-foreground">{item.description}</p>
+              <CardContent className="p-6 sm:p-8">
+                <item.icon className="h-10 w-10 sm:h-12 sm:w-12 text-[#083B73] mb-4" />
+                <h3 className="font-heading text-lg sm:text-xl mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-muted-foreground text-sm sm:text-base">
+                  {item.description}
+                </p>
               </CardContent>
             </Card>
           ))}
         </div>
       </section>
 
-      {/* Our Values */}
-      {/* <section className="container py-12 md:py-24 px-4 sm:px-6 lg:px-8 bg-black text-white">
-        <h2 className="text-center font-heading text-3xl mb-8">Our Values</h2>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-          {[
-            { value: "Innovation", description: "We embrace new ideas and technologies" },
-            { value: "Integrity", description: "We act with honesty and transparency" },
-            { value: "Collaboration", description: "We achieve more together" },
-            { value: "Excellence", description: "We strive for the highest quality in everything we do" },
-          ].map((item, index) => (
-            <div key={index} className="text-center">
-              <h3 className="font-heading text-xl mb-2 text-[#083B73]">{item.value}</h3>
-              <p className="text-zinc-400">{item.description}</p>
-            </div>
-          ))}
-        </div>
-      </section> */}
-
-      <section className="container py-12 md:py-24 px-4 sm:px-6 lg:px-8">
-        <h2 className="text-center font-heading text-3xl mb-8">
+      <section className="container py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
+        <h2 className="text-center font-heading text-2xl sm:text-3xl md:text-4xl mb-8 sm:mb-12">
           Current Openings
         </h2>
-        {/* <div className="grid gap-8"> */}
-        {/* {[
-            {
-              title: "Senior Software Engineer",
-              department: "Engineering",
-              location: "Remote",
-              type: "Full-time",
-            },
-            {
-              title: "Product Manager",
-              department: "Product",
-              location: "New York",
-              type: "Full-time",
-            },
-            {
-              title: "UI/UX Designer",
-              department: "Design",
-              location: "Remote",
-              type: "Full-time",
-            },
-            {
-              title: "Technical Recruiter",
-              department: "HR",
-              location: "London",
-              type: "Full-time",
-            },
-          ].map((job, index) => (
-            <Card key={index} className="rounded-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-              <CardContent className="flex flex-col gap-4 p-6 sm:flex-row sm:items-center sm:justify-between">
-                <div>
-                  <h3 className="font-heading text-xl">{job.title}</h3>
-                  <div className="mt-2 flex flex-wrap gap-2">
-                    <Badge variant="secondary">{job.department}</Badge>
-                    <Badge variant="secondary">{job.location}</Badge>
-                    <Badge variant="secondary">{job.type}</Badge>
-                  </div>
-                </div>
-                <Button style={{ backgroundColor: "#083B73" }} className="rounded-md">
-                  Apply Now
-                </Button>
-              </CardContent>
-            </Card>
-          ))} */}
-        {/* </div> */}
-        <div className="flex justify-center items-center py-12 bg-white ">
-          <div className="bg-white p-6 shadow-lg max-w-sm w-full rounded-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-            <h2 className="text-2xl font-semibold text-center text-gray-800">
-              No Opening Right Now
-            </h2>
-            <p className="mt-4 text-center text-gray-600">
-              We are not accepting new applications or requests at the moment.
-              Please check back later!
-            </p>
-            {/* <div className="mt-6 text-center">
-              <button className="bg-[#083B73] text-white px-6 py-2 rounded-md hover:bg-[#083B73]/90 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                Learn More
-              </button>
-            </div> */}
+        <div className="flex justify-center items-center py-12 bg-white">
+          <Card className="max-w-sm w-full rounded-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+            <CardContent className="p-6 sm:p-8">
+              <h3 className="text-xl sm:text-2xl font-semibold text-center text-gray-800 mb-4">
+                No Opening Right Now
+              </h3>
+              <p className="text-center text-gray-600 text-sm sm:text-base">
+                We are not accepting new applications or requests at the moment.
+                Please check back later!
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-black">
+        <div className="container mx-auto">
+          <h2 className="text-center font-heading text-2xl sm:text-3xl md:text-4xl mb-8 sm:mb-12 text-white">
+            Employee Benefits
+          </h2>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {[
+              { title: "Competitive Salary", icon: Briefcase },
+              { title: "Health Insurance", icon: Heart },
+              { title: "Flexible Work Hours", icon: Coffee },
+              { title: "Professional Development", icon: Users },
+              { title: "Remote Work Options", icon: Globe },
+              { title: "Stock Options", icon: Zap },
+            ].map((benefit, index) => (
+              <div key={index} className="flex items-center space-x-4">
+                <benefit.icon className="h-6 w-6 sm:h-8 sm:w-8 text-[#7ED957]" />
+                <span className="text-base sm:text-lg text-white">
+                  {benefit.title}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-16 bg-black">
-        <h2 className="text-center font-heading text-3xl mb-8 text-white">
-          Employee Benefits
-        </h2>
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {[
-            { title: "Competitive Salary", icon: Briefcase },
-            { title: "Health Insurance", icon: Heart },
-            { title: "Flexible Work Hours", icon: Coffee },
-            { title: "Professional Development", icon: Users },
-            { title: "Remote Work Options", icon: Globe },
-            { title: "Stock Options", icon: Zap },
-          ].map((benefit, index) => (
-            <div key={index} className="flex items-center space-x-4">
-              <benefit.icon className="h-8 w-8 text-[#7ED957]" />
-              <span className="text-lg text-white">{benefit.title}</span>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="container py-12 md:py-24 px-4 sm:px-6 lg:px-8">
-        <h2 className="text-center font-heading text-3xl mb-8">
+      <section className="container py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
+        <h2 className="text-center font-heading text-2xl sm:text-3xl md:text-4xl mb-8 sm:mb-12">
           Life at Maptiu
         </h2>
-        <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          <Card className="rounded-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-            <Image
-              src="/assets/innovative_culture.jpg"
-              alt="Office Culture"
-              width={400}
-              height={300}
-              className="aspect-video w-full object-cover"
-            />
-            <CardContent className="p-6">
-              <h3 className="font-heading text-xl">Innovative Culture</h3>
-              <p className="mt-2 text-muted-foreground">
-                Work in an environment that encourages creativity and
-                innovation.
-              </p>
-            </CardContent>
-          </Card>
-          <Card className="rounded-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-            <Image
-              src="/assets/global_teams.jpg"
-              alt="Team Collaboration"
-              width={400}
-              height={300}
-              className="aspect-video w-full object-cover"
-            />
-            <CardContent className="p-6">
-              <h3 className="font-heading text-xl">Global Team</h3>
-              <p className="mt-2 text-muted-foreground">
-                Collaborate with talented individuals from around the world.
-              </p>
-            </CardContent>
-          </Card>
-          <Card className="rounded-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-            <Image
-              src="/assets/great_banefits.jpg"
-              alt="Benefits"
-              width={400}
-              height={300}
-              className="aspect-video w-full object-cover"
-            />
-            <CardContent className="p-6">
-              <h3 className="font-heading text-xl">Great Benefits</h3>
-              <p className="mt-2 text-muted-foreground">
-                Competitive compensation and comprehensive benefits package.
-              </p>
-            </CardContent>
-          </Card>
+        <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {[
+            {
+              title: "Innovative Culture",
+              description:
+                "Work in an environment that encourages creativity and innovation.",
+              image: "/assets/innovative_culture.jpg",
+            },
+            {
+              title: "Global Team",
+              description:
+                "Collaborate with talented individuals from around the world.",
+              image: "/assets/global_teams.jpg",
+            },
+            {
+              title: "Great Benefits",
+              description:
+                "Competitive compensation and comprehensive benefits package.",
+              image: "/assets/great_banefits.jpg",
+            },
+          ].map((item, index) => (
+            <Card
+              key={index}
+              className="rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+            >
+              <Image
+                src={item.image || "/placeholder.svg"}
+                alt={item.title}
+                width={400}
+                height={300}
+                className="aspect-video w-full object-cover"
+              />
+              <CardContent className="p-6">
+                <h3 className="font-heading text-lg sm:text-xl mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-muted-foreground text-sm sm:text-base">
+                  {item.description}
+                </p>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </section>
 
