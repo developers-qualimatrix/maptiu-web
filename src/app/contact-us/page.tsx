@@ -1,16 +1,15 @@
 "use client"
 import { ContactForm } from "@/components/contact-form"
 import { Card, CardContent } from "@/components/ui/card"
-import { Mail, Phone, MapPin, Facebook, Twitter, LinkedinIcon as LinkedIn, Instagram } from "lucide-react"
+import { Mail, Phone, MapPin } from "lucide-react"
 import Image from "next/image"
-import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
 import { motion } from "framer-motion"
 
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-white">
-      <section className="relative overflow-hidden bg-black py-20 pt-24 text-white md:py-32">
+      <section className="relative overflow-hidden bg-black py-20 pt-24 text-white md:py-32 md:pt-36">
         <div className="absolute left-0 top-0 h-full w-full opacity-50">
           <Image
             src="/placeholder.svg?height=1080&width=1920"
@@ -164,7 +163,7 @@ export default function ContactPage() {
         </Card>
       </section>
 
-      <section className="bg-black text-white py-20 md:py-32">
+      {/* <section className="bg-black text-white py-20 md:py-32">
         <div className="container px-4 sm:px-6 lg:px-8">
           <h2 className="font-heading text-3xl mb-8 text-center">Connect with Us</h2>
           <div className="flex justify-center space-x-6">
@@ -180,7 +179,7 @@ export default function ContactPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   )
 }

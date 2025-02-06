@@ -1,23 +1,35 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import Image from "next/image"
-import { Briefcase, Users, Zap, Heart, Globe, Coffee } from "lucide-react"
-import { motion } from "framer-motion"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import Image from "next/image";
+import { Briefcase, Users, Zap, Heart, Globe, Coffee } from "lucide-react";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function CareersPage() {
   return (
     <div className="min-h-screen bg-white">
-      <section className="relative overflow-hidden bg-black py-20 pt-24 text-white md:py-32">
+      <section className="relative overflow-hidden bg-black py-20 pt-24 text-white md:py-32 md:pt-36">
         <div className="mx-auto max-w-3xl text-center">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-          <Badge className="mb-4" variant={"outline"}>Careers at Maptiu</Badge>
-          <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl">Join Our <span className="bg-gradient-to-r from-[#7ED957] to-[#7ED957] bg-clip-text text-transparent">Team</span></h1>
-          <p className="mt-6 text-xl text-muted-foreground">
-            Be part of a team that&#39;s revolutionizing the future of work.
-          </p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <Badge className="mb-4" variant={"outline"}>
+              Careers at Maptiu
+            </Badge>
+            <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl">
+              Join Our{" "}
+              <span className="bg-gradient-to-r from-[#7ED957] to-[#7ED957] bg-clip-text text-transparent">
+                Team
+              </span>
+            </h1>
+            <p className="mt-6 text-xl text-muted-foreground">
+              Be part of a team that&#39;s revolutionizing the future of work.
+            </p>
           </motion.div>
         </div>
       </section>
@@ -28,17 +40,20 @@ export default function CareersPage() {
           {[
             {
               title: "Innovation-Driven",
-              description: "Work on cutting-edge technologies and shape the future of talent acquisition.",
+              description:
+                "Work on cutting-edge technologies and shape the future of talent acquisition.",
               icon: Zap,
             },
             {
               title: "Global Impact",
-              description: "Your work will help businesses and professionals worldwide connect and grow.",
+              description:
+                "Your work will help businesses and professionals worldwide connect and grow.",
               icon: Globe,
             },
             {
               title: "Collaborative Culture",
-              description: "Join a diverse team of experts who value teamwork and mutual growth.",
+              description:
+                "Join a diverse team of experts who value teamwork and mutual growth.",
               icon: Users,
             },
           ].map((item, index) => (
@@ -75,9 +90,11 @@ export default function CareersPage() {
       </section> */}
 
       <section className="container py-12 md:py-24 px-4 sm:px-6 lg:px-8">
-        <h2 className="text-center font-heading text-3xl mb-8">Current Openings</h2>
-        <div className="grid gap-8">
-          {[
+        <h2 className="text-center font-heading text-3xl mb-8">
+          Current Openings
+        </h2>
+        {/* <div className="grid gap-8"> */}
+        {/* {[
             {
               title: "Senior Software Engineer",
               department: "Engineering",
@@ -118,12 +135,30 @@ export default function CareersPage() {
                 </Button>
               </CardContent>
             </Card>
-          ))}
+          ))} */}
+        {/* </div> */}
+        <div className="flex justify-center items-center py-12 bg-white ">
+          <div className="bg-white p-6 shadow-lg max-w-sm w-full rounded-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+            <h2 className="text-2xl font-semibold text-center text-gray-800">
+              No Opening Right Now
+            </h2>
+            <p className="mt-4 text-center text-gray-600">
+              We are not accepting new applications or requests at the moment.
+              Please check back later!
+            </p>
+            {/* <div className="mt-6 text-center">
+              <button className="bg-[#083B73] text-white px-6 py-2 rounded-md hover:bg-[#083B73]/90 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                Learn More
+              </button>
+            </div> */}
+          </div>
         </div>
       </section>
 
       <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-16 bg-black">
-        <h2 className="text-center font-heading text-3xl mb-8 text-white">Employee Benefits</h2>
+        <h2 className="text-center font-heading text-3xl mb-8 text-white">
+          Employee Benefits
+        </h2>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {[
             { title: "Competitive Salary", icon: Briefcase },
@@ -142,7 +177,9 @@ export default function CareersPage() {
       </section>
 
       <section className="container py-12 md:py-24 px-4 sm:px-6 lg:px-8">
-        <h2 className="text-center font-heading text-3xl mb-8">Life at Maptiu</h2>
+        <h2 className="text-center font-heading text-3xl mb-8">
+          Life at Maptiu
+        </h2>
         <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           <Card className="rounded-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
             <Image
@@ -155,7 +192,8 @@ export default function CareersPage() {
             <CardContent className="p-6">
               <h3 className="font-heading text-xl">Innovative Culture</h3>
               <p className="mt-2 text-muted-foreground">
-                Work in an environment that encourages creativity and innovation.
+                Work in an environment that encourages creativity and
+                innovation.
               </p>
             </CardContent>
           </Card>
@@ -169,7 +207,9 @@ export default function CareersPage() {
             />
             <CardContent className="p-6">
               <h3 className="font-heading text-xl">Global Team</h3>
-              <p className="mt-2 text-muted-foreground">Collaborate with talented individuals from around the world.</p>
+              <p className="mt-2 text-muted-foreground">
+                Collaborate with talented individuals from around the world.
+              </p>
             </CardContent>
           </Card>
           <Card className="rounded-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
@@ -182,7 +222,9 @@ export default function CareersPage() {
             />
             <CardContent className="p-6">
               <h3 className="font-heading text-xl">Great Benefits</h3>
-              <p className="mt-2 text-muted-foreground">Competitive compensation and comprehensive benefits package.</p>
+              <p className="mt-2 text-muted-foreground">
+                Competitive compensation and comprehensive benefits package.
+              </p>
             </CardContent>
           </Card>
         </div>
@@ -191,15 +233,21 @@ export default function CareersPage() {
       <section className="bg-black text-white py-20 md:py-32">
         <div className="container px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-[800px] text-center">
-            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl">Ready to make an impact?</h2>
-            <p className="mt-4 text-zinc-400">Join Maptiu and help shape the future of talent acquisition.</p>
-            <Button size="lg" className="mt-8 bg-[#7ED957] hover:bg-[#7ED957]/90 rounded-md">
-              View All Openings
+            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl">
+              Ready to make an impact?
+            </h2>
+            <p className="mt-4 text-zinc-400">
+              Join Maptiu and help shape the future of talent acquisition.
+            </p>
+            <Button
+              size="lg"
+              className="mt-8 bg-[#7ED957] hover:bg-[#7ED957]/90 rounded-md"
+            >
+              <Link href="/careers">View All Openings</Link>
             </Button>
           </div>
         </div>
       </section>
     </div>
-  )
+  );
 }
-
