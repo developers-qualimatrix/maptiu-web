@@ -11,7 +11,7 @@ import Link from "next/link";
 export default function CareersPage() {
   return (
     <div className="min-h-screen bg-white">
-      <section className="relative overflow-hidden bg-black py-20 sm:py-24 md:py-28 lg:py-32 lg:pt-36 text-white">
+      <section className="relative overflow-hidden bg-black py-20 pt-24 sm:py-24 md:py-28 lg:py-32 lg:pt-36 text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <motion.div
@@ -63,7 +63,7 @@ export default function CareersPage() {
           ].map((item, index) => (
             <Card
               key={index}
-              className="bg-white rounded-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              className="bg-white rounded-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-[#083B73]/10 hover:border-[#083B73]/50 hover:shadow-[#083B73]/20"
             >
               <CardContent className="p-6 sm:p-8">
                 <item.icon className="h-10 w-10 sm:h-12 sm:w-12 text-[#083B73] mb-4" />
@@ -84,7 +84,7 @@ export default function CareersPage() {
           Current Openings
         </h2>
         <div className="flex justify-center items-center py-12 bg-white">
-          <Card className="max-w-sm w-full rounded-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+          <Card className="max-w-sm w-full rounded-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-[#083B73]/10 hover:border-[#083B73]/50 hover:shadow-[#083B73]/20">
             <CardContent className="p-6 sm:p-8">
               <h3 className="text-xl sm:text-2xl font-semibold text-center text-gray-800 mb-4">
                 No Opening Right Now
@@ -150,7 +150,7 @@ export default function CareersPage() {
           ].map((item, index) => (
             <Card
               key={index}
-              className="rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              className="rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-[#083B73]/10 hover:border-[#083B73]/50 hover:shadow-[#083B73]/20"
             >
               <Image
                 src={item.image || "/placeholder.svg"}

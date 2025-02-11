@@ -21,13 +21,13 @@ export default function MapItPage() {
     <div className="min-h-screen bg-white">
       <section className="relative overflow-hidden bg-black py-20 pt-24 text-white md:py-32 md:pt-36">
         <div className="absolute left-0 top-0 h-full w-full opacity-50">
-          <Image
+          {/* <Image
             src="/placeholder.svg?height=1080&width=1920"
             alt="Contact Background"
             layout="fill"
             objectFit="cover"
             className="mix-blend-overlay"
-          />
+          /> */}
           <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent" />
         </div>
         <div className="container relative px-4 sm:px-6 lg:px-8">
@@ -84,7 +84,7 @@ export default function MapItPage() {
                 className="w-full sm:w-auto rounded-md border-[#083B73] text-[#083B73] hover:bg-[#083B73]/10"
                 asChild
               >
-                <Link href="/contact-us">Schedule Demo</Link>
+                <Link href="https://calendly.com/hrishiraj">Schedule Demo</Link>
               </Button>
             </div>
           </div>
@@ -113,7 +113,7 @@ export default function MapItPage() {
           How It Works
         </h2>
         <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <Card className="rounded-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+          <Card className="rounded-lg transition-all duration-300 hover:shadow-lg border-[#083B73]/10 hover:border-[#083B73]/50  hover:shadow-[#083B73]/20 hover:-translate-y-1">
             <CardContent className="p-6 sm:p-8">
               <h3 className="font-heading text-xl sm:text-2xl mb-4">
                 For Corporates
@@ -143,7 +143,7 @@ export default function MapItPage() {
               </ul>
             </CardContent>
           </Card>
-          <Card className="rounded-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+          <Card className="rounded-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-[#083B73]/10 hover:border-[#083B73]/50 hover:shadow-[#083B73]/20 ">
             <CardContent className="p-6 sm:p-8">
               <h3 className="font-heading text-xl sm:text-2xl mb-4">
                 For Colleges
@@ -171,7 +171,7 @@ export default function MapItPage() {
               </ul>
             </CardContent>
           </Card>
-          <Card className="rounded-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+          <Card className="rounded-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-[#083B73]/10 hover:border-[#083B73]/50 hover:shadow-[#083B73]/20">
             <CardContent className="p-6 sm:p-8">
               <h3 className="font-heading text-xl sm:text-2xl mb-4">
                 For Students
@@ -287,7 +287,7 @@ export default function MapItPage() {
             ].map((feature, index) => (
               <Card
                 key={index}
-                className="bg-white border-[#083B73]/10 hover:border-[#083B73]/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 rounded-md"
+                className="bg-white border-[#083B73]/10 hover:border-[#083B73]/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 rounded-md hover:shadow-[#083B73]/20"
               >
                 <CardContent className="flex flex-col items-center p-6 sm:p-8 text-center h-full">
                   <feature.icon className="h-10 w-10 sm:h-12 sm:w-12 text-[#083B73] mb-4" />
@@ -333,7 +333,7 @@ export default function MapItPage() {
           ].map((story, index) => (
             <Card
               key={index}
-              className="rounded-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              className="rounded-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-[#083B73]/10 hover:border-[#083B73]/50 hover:shadow-[#083B73]/20"
             >
               <CardContent className="p-6 sm:p-8 flex flex-col items-center text-center h-full">
                 <Image

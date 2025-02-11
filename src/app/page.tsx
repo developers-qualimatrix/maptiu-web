@@ -29,15 +29,15 @@ export default function Home() {
   return (
     <div className="flex min-h-screen flex-col">
       {/* Hero Section (Dark) */}
-      <section className="relative overflow-hidden bg-black py-12 sm:py-16 md:py-20 lg:py-24 lg:pt-32 min-h-[500px] sm:min-h-[600px] md:min-h-[700px] text-white">
+      <section className="relative overflow-hidden bg-black py-12 sm:py-16 md:py-24 lg:py-24 lg:pt-32 min-h-[500px] sm:min-h-[600px] md:min-h-[400px] text-white">
         <div className="absolute left-0 top-0 h-full w-full opacity-50">
-          <Image
+          {/* <Image
             src="/placeholder.svg?height=1080&width=1920"
             alt="Background"
             layout="fill"
             objectFit="cover"
             className="mix-blend-overlay"
-          />
+          /> */}
           <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent" />
         </div>
         <div className="container relative h-full flex items-center">
@@ -53,9 +53,9 @@ export default function Home() {
               >
                 Skill. Scale. Succeed
               </Badge>
-              <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight">
-                Bridging Skills,{" "}
-                <span className="bg-gradient-to-r from-[#7ED957] to-[#7ED957] bg-clip-text text-transparent">
+              <h1 className=" font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl ">
+               <span className="leading-[90px]"> Bridging Skills,{" "}</span>
+                <span className=" bg-gradient-to-r from-[#7ED957] to-[#7ED957] bg-clip-text text-transparent">
                   Talent, and Opportunities
                 </span>
               </h1>
@@ -174,90 +174,88 @@ export default function Home() {
         </div>
       </section> */}
 
-{/* Our Solutions Section (Light) */}
-<section
-  className =
-    "bg-white py-12 sm:py-16 md:py-24 lg:py-32" >
-    (
-      <div className="container px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-[800px] text-center">
-          <Badge className="mb-2 sm:mb-4">Our Solutions</Badge>
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
-            Expert solutions for every hiring need
-          </h2>
-          <p className="mt-2 sm:mt-4 text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground">
-            Get expert solutions for every talent acquisition requirement
-          </p>
-        </div>
-        <div className="mt-8 sm:mt-12 md:mt-16 grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-          {[
-            {
-              title: "Map It - Skill Access Platform",
-              description:
-                "A dynamic marketplace where students showcase their skills through assessments, connecting with colleges and corporates for endless opportunities.",
-              icon: ClipboardCheck,
-              href: "/mapIt",
-              image: "/assets/skillaccess_test.webp",
-            },
-            {
-              title: "Hire It",
-              description:
-                "End-to-end recruitment support to help companies find talent that aligns with their goals and culture",
-              icon: UserCheck,
-              href: "/hire-it",
-              image: "/assets/hireit_image.webp",
-              comingSoon: true,
-            },
-            {
-              title: "Staff It",
-              description:
-                "Flexible staff augmentation solutions to help you quickly scale your tech teams with the right talent.",
-              icon: Users,
-              href: "/staffIt",
-              image: "/assets/resource_augmentation_test.webp",
-              comingSoon: true,
-            },
-          ].map((service, index) => (
-            <motion.div
-              key={service.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-            >
-              <Card
-                className="h-full overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02] hover:-translate-y-1 cursor-pointer relative rounded-md"
-                onClick={() => (window.location.href = service.href)}
+      {/* Our Solutions Section (Light) */}
+      <section className="bg-white py-12 sm:py-16 md:py-24 lg:py-32">
+        (
+        <div className="container px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-[800px] text-center">
+            <Badge className="mb-2 sm:mb-4">Our Solutions</Badge>
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+              Expert solutions for every hiring need
+            </h2>
+            <p className="mt-2 sm:mt-4 text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground">
+              Get expert solutions for every talent acquisition requirement
+            </p>
+          </div>
+          <div className="mt-8 sm:mt-12 md:mt-16 grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                title: "Map It - Skill Access Platform",
+                description:
+                  "A dynamic marketplace where students showcase their skills through assessments, connecting with colleges and corporates for endless opportunities.",
+                icon: ClipboardCheck,
+                href: "/mapIt",
+                image: "/assets/skillaccess_test.webp",
+              },
+              {
+                title: "Hire It",
+                description:
+                  "End-to-end recruitment support to help companies find talent that aligns with their goals and culture",
+                icon: UserCheck,
+                href: "/hire-it",
+                image: "/assets/hireit_image.webp",
+                comingSoon: true,
+              },
+              {
+                title: "Staff It",
+                description:
+                  "Flexible staff augmentation solutions to help you quickly scale your tech teams with the right talent.",
+                icon: Users,
+                href: "/staffIt",
+                image: "/assets/resource_augmentation_test.webp",
+                comingSoon: true,
+              },
+            ].map((service, index) => (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
               >
-                {service.comingSoon && (
-                  <div className="absolute top-2 right-2 sm:top-4 sm:right-4 bg-[#083B73] text-white px-2 py-1 rounded-full text-xs font-semibold z-10">
-                    Coming Soon
+                <Card
+                  className="h-full overflow-hidden  duration-300  hover:scale-[1.02] border-[#083B73]/10 transition-all  hover:border-[#083B73]/50 hover:shadow-xl hover:shadow-[#083B73]/10 hover:-translate-y-1 cursor-pointer relative rounded-md"
+                  onClick={() => (window.location.href = service.href)}
+                >
+                  {service.comingSoon && (
+                    <div className="absolute top-2 right-2 sm:top-4 sm:right-4 bg-[#083B73] text-white px-2 py-1 rounded-full text-xs font-semibold z-10">
+                      Coming Soon
+                    </div>
+                  )}
+                  <div className="relative h-48 sm:h-56 md:h-64 lg:h-72">
+                    <Image
+                      src={service.image || "/placeholder.svg"}
+                      alt={service.title}
+                      layout="fill"
+                      objectFit="cover"
+                    />
                   </div>
-                )}
-                <div className="relative h-48 sm:h-56 md:h-64 lg:h-72">
-                  <Image
-                    src={service.image || "/placeholder.svg"}
-                    alt={service.title}
-                    layout="fill"
-                    objectFit="cover"
-                  />
-                </div>
-                <CardContent className="flex h-full flex-col p-4 sm:p-6">
-                  <service.icon className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-[#083B73]" />
-                  <h3 className="mt-2 sm:mt-4 font-heading text-lg sm:text-xl md:text-2xl lg:text-3xl">
-                    {service.title}
-                  </h3>
-                  <p className="mt-2 flex-1 text-xs sm:text-sm md:text-base text-muted-foreground">
-                    {service.description}
-                  </p>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
+                  <CardContent className="flex h-full flex-col p-4 sm:p-6">
+                    <service.icon className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-[#083B73]" />
+                    <h3 className="mt-2 sm:mt-4 font-heading text-lg sm:text-xl md:text-2xl lg:text-3xl">
+                      {service.title}
+                    </h3>
+                    <p className="mt-2 flex-1 text-xs sm:text-sm md:text-base text-muted-foreground">
+                      {service.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
         </div>
-      </div>
-    )
-  </section>
+        )
+      </section>
 
       {/* Testimonials Section (Dark) */}
       <section className="bg-black text-white py-8 md:py-12">

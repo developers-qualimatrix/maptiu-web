@@ -3,7 +3,6 @@
 import type React from "react"
 import { Badge } from "@/components/ui/badge"
 import { motion } from "framer-motion"
-import Image from "next/image"
 import CultureTabs from "@/components/leadership-tabs"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
@@ -12,15 +11,15 @@ const Leadership: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-black py-16 sm:py-20 md:py-24 lg:py-32 text-white">
+      <section className="relative overflow-hidden bg-black py-16 pt-20 sm:py-20 md:py-24 lg:py-32 text-white">
         <div className="absolute left-0 top-0 h-full w-full opacity-50">
-          <Image
+          {/* <Image
             src="/placeholder.svg?height=1080&width=1920"
             alt="Leadership Hero Background"
             layout="fill"
             objectFit="cover"
             className="mix-blend-overlay"
-          />
+          /> */}
           <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent" />
         </div>
         <div className="container relative px-4 sm:px-6 lg:px-8">
@@ -30,7 +29,7 @@ const Leadership: React.FC = () => {
                 Leadership
               </Badge>
               <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
-                Meet the Team Shaping Our Future
+                Meet the Team Shaping  <span className="bg-gradient-to-r from-[#7ED957] to-[#7ED957] bg-clip-text text-transparent">Our Future </span>
               </h1>
               <p className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl text-zinc-400">
                 These are the visionary minds who drive our success and innovation every day.

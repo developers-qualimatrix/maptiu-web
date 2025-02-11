@@ -2,7 +2,6 @@
 import { ContactForm } from "@/components/contact-form";
 import { Card, CardContent } from "@/components/ui/card";
 import { Mail, Phone, MapPin } from "lucide-react";
-import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
 
@@ -11,13 +10,13 @@ export default function ContactPage() {
     <div className="min-h-screen bg-white">
       <section className="relative overflow-hidden bg-black py-20 sm:py-24 md:py-28 lg:py-32 text-white">
         <div className="absolute inset-0">
-          <Image
+          {/* <Image
             src="/placeholder.svg?height=1080&width=1920"
             alt="Contact Background"
             layout="fill"
             objectFit="cover"
             className="opacity-50 mix-blend-overlay"
-          />
+          /> */}
           <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent" />
         </div>
         <div className="container relative px-4 sm:px-6 lg:px-8 mx-auto">
@@ -51,7 +50,7 @@ export default function ContactPage() {
             <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl">
               Contact Information
             </h2>
-            <Card className="bg-gradient-to-br from-[#083B73] to-[#083B73] text-white rounded-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+            <Card className="bg-gradient-to-br from-[#083B73] to-[#083B73] text-white rounded-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-[#083B73]/10 hover:border-[#083B73]/50 hover:shadow-[#083B73]/20">
               <CardContent className="flex items-center gap-4 p-6">
                 <Mail className="h-6 w-6 sm:h-8 sm:w-8" />
                 <div>
@@ -62,7 +61,7 @@ export default function ContactPage() {
                 </div>
               </CardContent>
             </Card>
-            <Card className="bg-gradient-to-br from-[#083B73] to-[#083B73] text-white rounded-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+            <Card className="bg-gradient-to-br from-[#083B73] to-[#083B73] text-white rounded-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-[#083B73]/10 hover:border-[#083B73]/50 hover:shadow-[#083B73]/20">
               <CardContent className="flex items-center gap-4 p-6">
                 <Phone className="h-6 w-6 sm:h-8 sm:w-8" />
                 <div>
@@ -71,7 +70,7 @@ export default function ContactPage() {
                 </div>
               </CardContent>
             </Card>
-            <Card className="bg-gradient-to-br from-[#083B73] to-[#083B73] text-white rounded-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+            <Card className="bg-gradient-to-br from-[#083B73] to-[#083B73] text-white rounded-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-[#083B73]/10 hover:border-[#083B73]/50 hover:shadow-[#083B73]/20">
               <CardContent className="flex items-center gap-4 p-6">
                 <MapPin className="h-6 w-6 sm:h-8 sm:w-8" />
                 <div>
@@ -164,7 +163,7 @@ export default function ContactPage() {
           ].map((office, index) => (
             <Card
               key={index}
-              className="rounded-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              className="rounded-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-[#083B73]/10 hover:border-[#083B73]/50 hover:shadow-[#083B73]/20"
             >
               <CardContent className="p-6">
                 <h3 className="font-heading text-xl mb-2">{office.city}</h3>
