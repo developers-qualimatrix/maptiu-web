@@ -1,8 +1,8 @@
-"use client"
-import { motion } from "framer-motion"
-import { ClipboardCheck, Network, Users, UserCheck } from "lucide-react"
-import { Card, CardContent } from "./ui/card"
-import { Badge } from "./ui/badge"
+"use client";
+import { motion } from "framer-motion";
+import { ClipboardCheck, Network, Users, UserCheck } from "lucide-react";
+import { Card, CardContent } from "./ui/card";
+import { Badge } from "./ui/badge";
 
 export function ProcessFlow() {
   const processes = [
@@ -15,7 +15,7 @@ export function ProcessFlow() {
     },
     {
       icon: Network,
-      title: "Talent Marketplace Integration",
+      title: "Talent Marketplace",
       description:
         "Seamlessly connect with a vast network of colleges and corporates, creating diverse opportunities for growth.",
       gradient: "from-[#083B73] to-[#083B73]",
@@ -34,7 +34,7 @@ export function ProcessFlow() {
         "End-to-end hiring support to match businesses with candidates who fit their goals and culture perfectly.",
       gradient: "from-[#083B73] to-[#083B73]",
     },
-  ]
+  ];
 
   return (
     <section className="relative overflow-hidden bg-white py-12 sm:py-16 md:py-20 lg:py-24">
@@ -49,23 +49,30 @@ export function ProcessFlow() {
               viewport={{ once: true }}
             >
               <div className="flex justify-center sm:justify-start">
-                <Badge variant="outline" className="border-[#083B73] text-white bg-[#083B73] text-xs sm:text-sm">
+                <Badge
+                  variant="outline"
+                  className="border-[#083B73] text-white bg-[#083B73] text-xs sm:text-sm"
+                >
                   Our Process Flow
                 </Badge>
               </div>
-              <h2 className="mt-4 sm:mt-6 font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight text-black">
+              <h2 className="mt-4 sm:mt-6 font-heading text-3xl sm:text-4xl md:text-5xl lg:text-5xl leading-tight text-black">
                 One Platform,{" "}
                 <span className="bg-gradient-to-r from-[#083B73] to-[#083B73] bg-clip-text text-transparent">
-                  Endless <br className="hidden sm:inline" /> Possibilities:
+                  <br />
+                  Endless Possibilities:
                 </span>{" "}
                 <br className="hidden sm:inline" />
-                Assess Talent. <br className="hidden sm:inline" />
-                Staff Smart.
-                <br className="hidden sm:inline" /> Hire Right.
+                <span className="text-2xl font-semibold text-[#083B73] mt-2 block">
+                  Assess Talent | Staff Smart | Hire Right
+                </span>
               </h2>
-              <p className="mt-4 sm:mt-6 text-base sm:text-lg text-muted-foreground">
-                We help you find the right people, a smart way. From assessing skills to building strong tech teams and
-                hiring top talent, our platform makes the entire process simple, seamless, and effective.
+
+              <p className="mt-4 sm:mt-6 text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                We help you find the right people, a smart way. From assessing
+                skills to building strong tech teams and hiring top talent, our
+                platform makes the entire process simple, seamless, and
+                effective.
               </p>
             </motion.div>
           </div>
@@ -87,8 +94,12 @@ export function ProcessFlow() {
                     >
                       <process.icon className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
                     </div>
-                    <h3 className="font-heading text-lg sm:text-xl text-[#083B73] mt-2 sm:mt-3">{process.title}</h3>
-                    <p className="mt-2 text-xs sm:text-sm text-muted-foreground">{process.description}</p>
+                    <h3 className="font-heading text-lg sm:text-xl text-[#083B73] mt-2 sm:mt-3">
+                      {process.title}
+                    </h3>
+                    <p className="mt-2 text-xs sm:text-sm text-muted-foreground">
+                      {process.description}
+                    </p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -97,6 +108,5 @@ export function ProcessFlow() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-

@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 
 const cultureTabData = [
   {
-    id: 2,
+    id: 1,
     description:
       "Learn and Unlearn every day, the world is changing faster than our expectations and to be an expert in your field you have to learn something new every day, and at the same time, you need to figure out what you need to unlearn also.",
     imageName: "/placeholder.svg?height=1080&width=1920",
@@ -13,7 +13,7 @@ const cultureTabData = [
     empPosition: "CPO",
   },
   {
-    id: 3,
+    id: 2,
     description:
       "Talented and Intelligent minds are the toughest to be managed, but not when you are a patient person and a good listener you can sustain the balance. People perform with excellence when they feel motivated at their Workplace, As an Hr I try my best to make this work an abode of Growth and satisfaction for everyone.",
     imageName: "/placeholder.svg?height=1080&width=1920",
@@ -21,7 +21,7 @@ const cultureTabData = [
     empPosition: "CEO",
   },
   {
-    id: 1,
+    id: 3,
     description:
       "Its possible' Weather personal or professional life I have always preferred this attitude. Being a Test Architect this approach has helped me come along way when I look at bugs the only thing I got to do is to kill them.",
     imageName: "/placeholder.svg?height=1080&width=1920",
@@ -61,11 +61,11 @@ const CultureTabs: React.FC = () => {
             Meet Our Leaders
           </span>
 
-          <div className="tabs grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-4 sm:mt-6">
+          <div className="tabs grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-4 sm:mt-6 ">
             {cultureTabData.map((tab) => (
               <div
                 key={tab.id}
-                className={`tab cursor-pointer ${
+                className={`tab cursor-pointer border-[#083B73]/10 transition-all duration-300 hover:border-[#083B73]/50 hover:shadow-xl hover:shadow-[#083B73]/20 hover:-translate-y-1 ${
                   activeTab === tab.id
                     ? "bg-[#f0f0f0] text-black"
                     : "bg-[#f0f0f0]"

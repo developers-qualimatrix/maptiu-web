@@ -68,7 +68,7 @@ export default function AboutPage() {
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
             >
-              <Card className="relative overflow-hidden h-full rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+              <Card className="relative overflow-hidden h-full rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border-[#083B73]/10 hover:border-[#083B73]/50 hover:shadow-[#083B73]/20">
                 <CardContent className="p-6 sm:p-8">
                   <div className="absolute right-0 top-0 h-32 w-32 -translate-y-8 translate-x-8 rounded-full bg-[#083B73]/20" />
                   <h2 className="font-heading text-2xl sm:text-3xl mb-4">{item.title}</h2>
@@ -115,7 +115,7 @@ export default function AboutPage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="overflow-hidden h-full rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                <Card className="overflow-hidden h-full rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border-[#083B73]/10 hover:border-[#083B73]/50 hover:shadow-[#083B73]/20">
                   <Image
                     src={item.image || "/placeholder.svg"}
                     alt={item.title}
@@ -183,7 +183,7 @@ export default function AboutPage() {
                   />
                 </div>
               )}
-              <Card className="relative overflow-hidden h-full rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+              <Card className="relative overflow-hidden h-full rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border-[#083B73]/10 hover:border-[#083B73]/50 hover:shadow-[#083B73]/20">
                 <CardContent className="p-6">
                   <div className="absolute right-2 top-2 text-6xl font-bold text-muted/10">{step.number}</div>
                   <step.icon className="h-12 w-12 text-[#083B73]" />
