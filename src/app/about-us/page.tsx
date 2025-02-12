@@ -7,6 +7,7 @@ import { Users, Target, Heart} from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { visionAndMission, cultureContent } from "@/components/data";
 
 export default function AboutPage() {
   return (
@@ -49,18 +50,7 @@ export default function AboutPage() {
 
       <section className="container py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
         <div className="grid gap-8 md:grid-cols-2">
-          {[
-            {
-              title: "Our Vision",
-              content:
-                "To be the leading talent solutions partner, connecting skills with opportunities and empowering growth for individuals and businesses worldwide.",
-            },
-            {
-              title: "Our Mission",
-              content:
-                "To simplify talent discovery through smart assessments, seamless staffing, and strategic hiring—helping people and organizations reach their full potential.",
-            },
-          ].map((item) => (
+          {visionAndMission.map((item) => (
             <motion.div
               key={item.title}
               initial={{ opacity: 0, y: 20 }}
@@ -90,24 +80,7 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              {
-                title: "Excellence and Growth",
-                description:
-                  "We are passionate about delivering exceptional results with our valuable teamwork and continuous learnings.",
-                image: "/assets/innovation_first.jpg",
-              },
-              {
-                title: "Integrity and Inclusivity",
-                description: "We prioritize transparency, fostering a diverse and supportive environment.",
-                image: "/assets/global_mindset.png",
-              },
-              {
-                title: "People-Centric",
-                description: "We believe in creating lasting relationships built on trust and mutual success.",
-                image: "/assets/people_centric.jpg",
-              },
-            ].map((item, index) => (
+            {cultureContent.map((item, index) => (
               <motion.div
                 key={item.title}
                 initial={{ opacity: 0, y: 20 }}

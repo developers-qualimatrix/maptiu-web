@@ -100,8 +100,8 @@ export function Footer() {
                 <FacebookIcon />
               </a>
               <a
-                href="https://x.com/Maptiu_Tech"
-                aria-label="Twitter"
+                href="https://www.instagram.com/maptiu_technologies/"
+                aria-label="Instagram"
                 target="_blank"
               >
                 <InstagramIcon />
@@ -114,8 +114,8 @@ export function Footer() {
                 <LinkedinIcon />
               </a>
               <a
-                href="https://www.instagram.com/maptiu_technologies/"
-                aria-label="Instagram"
+                href="https://x.com/Maptiu_Tech"
+                aria-label="Twitter"
                 target="_blank"
               >
                 <XIcon />

@@ -100,24 +100,28 @@ export default function ContactPage() {
           <div className="grid gap-6 sm:gap-8 md:grid-cols-2">
             {[
               {
-                question: "What services does Maptiu offer?",
+                question:
+                  "Is there a demo or trial version available before full implementation?",
                 answer:
-                  "Maptiu offers a range of talent acquisition services including AI-driven matching, end-to-end recruitment, and resource augmentation.",
+                  "Yes, SkilAccess provides a three-month free trial with full access to all features, allowing you to explore the platform's complete functionality before committing.",
               },
               {
-                question: "How does Maptiu's AI matching work?",
+                question:
+                  "Can companies filter candidates based on their skills and eligibility after receiving nominations?",
                 answer:
-                  "Our AI analyzes job requirements and candidate profiles to find the best matches, considering skills, experience, and cultural fit.",
+                  "Yes, companies can filter candidates based on the skills listed in their resumes and the information provided by colleges during nominations.",
               },
               {
-                question: "What industries does Maptiu serve?",
+                question:
+                  "Can we customize tests for specific skill sets or job roles?",
                 answer:
-                  "We serve a wide range of industries including tech, finance, healthcare, and more. Our solutions are adaptable to various sectors.",
+                  "Yes, you can customize tests based on specific skills related to the job you are posting.",
               },
               {
-                question: "How quickly can Maptiu find suitable candidates?",
+                question:
+                  "Can companies extend deadlines for applications or tests if needed?",
                 answer:
-                  "Depending on the role and requirements, we typically present suitable candidates within 1-2 weeks of initiating the search.",
+                  "Yes, companies can extend the deadlines for applications or tests as per their requirements for the job.",
               },
             ].map((faq, index) => (
               <Card
@@ -138,34 +142,24 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="container py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
+      <section className="container py-8 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
         <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl mb-8 sm:mb-12 text-center">
           Our Offices
         </h2>
-        <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="flex justify-center items-center">
           {[
             {
-              city: "London",
+              city: "Indore",
               address:
-                "New Broad Street House, 35 New Broad Street, London, UK, EC2M 1NH",
+                "Cliffton Corporate, 505-506, Sector A, Slice 6, Aranya Nagar, Scheme 78, Vijay Nagar, Indore, Madhya Pradesh 452010",
               phone: "+44 20 1234 5678",
             },
-            {
-              city: "New York",
-              address: "350 Fifth Avenue, New York, NY 10118, USA",
-              phone: "+1 212 123 4567",
-            },
-            {
-              city: "Singapore",
-              address: "1 Raffles Place, #20-61 Tower 2, Singapore 048616",
-              phone: "+65 6123 4567",
-            },
           ].map((office, index) => (
-            <Card
+            <div
               key={index}
-              className="rounded-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-[#083B73]/10 hover:border-[#083B73]/50 hover:shadow-[#083B73]/20"
+              className="rounded-lg flex flex-col items-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-[#083B73]/10 hover:border-[#083B73]/50 hover:shadow-[#083B73]/20 w-full sm:w-80 lg:w-96 mx-4"
             >
-              <CardContent className="p-6">
+              <div className="p-6 text-center">
                 <h3 className="font-heading text-xl mb-2">{office.city}</h3>
                 <p className="text-muted-foreground mb-2 text-sm sm:text-base">
                   {office.address}
@@ -173,8 +167,8 @@ export default function ContactPage() {
                 <p className="text-muted-foreground text-sm sm:text-base">
                   {office.phone}
                 </p>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           ))}
         </div>
       </section>
