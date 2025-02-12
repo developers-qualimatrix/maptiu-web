@@ -38,7 +38,7 @@ export default function MapItPage() {
               transition={{ duration: 0.5 }}
             >
               <Badge className="mb-4" variant="outline">
-                Mapit Presents: SkillAccess
+                SkillAccess Platform
               </Badge>
               <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl">
                 Explore the Power of{" "}
@@ -47,8 +47,8 @@ export default function MapItPage() {
                 </span>
               </h1>
               <p className="mt-6 text-xl text-zinc-400">
-                SkillAccess by Mapit unlocks endless possibilities for skill
-                development and learning.
+                SkillAccess unlocks endless possibilities for skill development
+                and learning.
               </p>
             </motion.div>
           </div>
@@ -91,7 +91,7 @@ export default function MapItPage() {
           <div className="relative mt-8 lg:mt-0">
             <div className="absolute -left-4 -top-4 h-48 w-48 sm:h-56 sm:w-56 md:h-64 md:w-64 lg:h-72 lg:w-72 rounded-full bg-[#083B73]/10 lg:-left-8 lg:-top-8" />
             <Image
-              src="/assets/skillaccess.png"
+              src="/assets/skill_access/skillaccess_dashboard.png"
               alt="SkillAccess Platform Interface"
               width={600}
               height={400}
@@ -311,24 +311,25 @@ export default function MapItPage() {
         <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
           {[
             {
-              name: "Sarah Johnson",
-              role: "Software Engineer",
-              image: "/assets/white_placeholder.png",
+              name: "Protonshub Technologies",
+              role: "",
+              image: "/assets/reviews/protonshub_technologies_logo.jpg",
               quote:
-                "SkillAccess helped me land my dream job right out of college!",
+                "With Skillaccess, we’ve saved so much time on screening candidates. The automated evaluations and insightful reports made it easy to identify top candidates and streamline our hiring.",
             },
             {
-              name: "Acme Corporation",
-              role: "Hiring Manager",
-              image: "/assets/white_placeholder.png",
-              quote: "We've reduced our time-to-hire by 40% using SkillAccess.",
+              name: "Acropolis Institute of Technology & Research",
+              role: "",
+              image: "/assets/reviews/acropolis_logo.jpg",
+              quote:
+                "For hiring from a pool of 300 candidates, Skillaccess was invaluable. The platform’s detailed assessments and easy candidate tracking features helped us efficiently hire the right people for the roles we needed to fill.",
             },
             {
-              name: "University of Excellence",
-              role: "Career Services Director",
-              image: "/assets/white_placeholder.png",
+              name: "Qualimatrix Technologies",
+              role: "",
+              image: "/assets/reviews/qualimatrix_logo.jpg",
               quote:
-                "SkillAccess has significantly improved our placement rates.",
+                "Skillaccess has made recruitment much more efficient for us. The platform’s accurate skill assessments and seamless integration with our existing systems have allowed us to hire the right people faster and more effectively",
             },
           ].map((story, index) => (
             <Card
@@ -339,8 +340,8 @@ export default function MapItPage() {
                 <Image
                   src={story.image || "/placeholder.svg"}
                   alt={story.name}
-                  width={80}
-                  height={80}
+                  width={100}
+                  height={100}
                   className="rounded-full mb-4 sm:mb-6"
                 />
                 <h3 className="font-heading text-lg sm:text-xl mb-2">

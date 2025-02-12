@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
-import { Briefcase, Users, Zap, Heart, Globe, Coffee } from "lucide-react";
+import { Briefcase, Users, Zap, Globe, Coffee } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -29,7 +29,8 @@ export default function CareersPage() {
                 </span>
               </h1>
               <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground">
-                Be part of a team that&apos;s revolutionizing the future of work.
+                Be part of a team that&apos;s revolutionizing the future of
+                work.
               </p>
             </motion.div>
           </div>
@@ -100,21 +101,24 @@ export default function CareersPage() {
 
       <section className="py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-black">
         <div className="container mx-auto">
-          <h2 className="text-center font-heading text-2xl sm:text-3xl md:text-4xl mb-8 sm:mb-12 text-white">
+          <h2 className="text-center font-heading text-2xl sm:text-3xl md:text-4xl mb-10 sm:mb-16 text-white font-semibold">
             Employee Benefits
           </h2>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {[
               { title: "Competitive Salary", icon: Briefcase },
-              { title: "Health Insurance", icon: Heart },
               { title: "Flexible Work Hours", icon: Coffee },
               { title: "Professional Development", icon: Users },
               { title: "Remote Work Options", icon: Globe },
-              { title: "Stock Options", icon: Zap },
             ].map((benefit, index) => (
-              <div key={index} className="flex items-center space-x-4">
-                <benefit.icon className="h-6 w-6 sm:h-8 sm:w-8 text-[#7ED957]" />
-                <span className="text-base sm:text-lg text-white">
+              <div
+                key={index}
+                className="flex flex-col items-center justify-center bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl hover:bg-gray-700 transition duration-300 ease-in-out"
+              >
+                <div className="flex justify-center items-center mb-4">
+                  <benefit.icon className="h-12 w-12 sm:h-14 sm:w-14 text-[#7ED957] transition-transform transform hover:scale-110" />
+                </div>
+                <span className="text-lg sm:text-xl text-white font-medium tracking-wide text-center">
                   {benefit.title}
                 </span>
               </div>
@@ -133,19 +137,19 @@ export default function CareersPage() {
               title: "Innovative Culture",
               description:
                 "Work in an environment that encourages creativity and innovation.",
-              image: "/assets/innovative_culture.jpg",
+              image: "/assets/life_at_maptiu/innovative_culture.jpg",
             },
             {
               title: "Global Team",
               description:
                 "Collaborate with talented individuals from around the world.",
-              image: "/assets/global_teams.jpg",
+              image: "/assets/life_at_maptiu/global_teams.jpg",
             },
             {
               title: "Great Benefits",
               description:
                 "Competitive compensation and comprehensive benefits package.",
-              image: "/assets/great_banefits.jpg",
+              image: "/assets/life_at_maptiu/great_banefits.jpg",
             },
           ].map((item, index) => (
             <Card

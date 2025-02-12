@@ -23,8 +23,8 @@ export function GradientCTA() {
             <br />
             for a Smarter Tomorrow!
           </h2>
-          <p className="max-w-2xl text-lg text-zinc-400">
-            Schedule a discovery call with our talent experts and discuss your hiring needs in detail.
+          <p className="max-w-3xl text-lg text-zinc-400">
+          Our talent experts are ready to help you build your dream team. Schedule a call today!
           </p>
         </div>
         <Button

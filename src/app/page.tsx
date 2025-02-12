@@ -51,10 +51,10 @@ export default function Home() {
                 variant="outline"
                 className="mb-3 sm:mb-4 border-white/30 text-white text-xs sm:text-sm"
               >
-                Skill. Scale. Succeed
+                Skill. Scale. Succeed.
               </Badge>
               <h1 className=" font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl ">
-               <span className="leading-[90px]"> Bridging Skills,{" "}</span>
+                <span className="leading-[90px]"> Bridging Skills, </span>
                 <span className=" bg-gradient-to-r from-[#7ED957] to-[#7ED957] bg-clip-text text-transparent">
                   Talent, and Opportunities
                 </span>
@@ -75,7 +75,7 @@ export default function Home() {
                 className="w-full sm:w-auto bg-[#7ED957] hover:bg-[#7ED957]/90 rounded-md text-sm sm:text-base"
                 asChild
               >
-                <Link href="/about-us">Get Started</Link>
+                <Link href="/contact-us">Get Started</Link>
               </Button>
               <Button
                 size="lg"
@@ -195,7 +195,7 @@ export default function Home() {
                   "A dynamic marketplace where students showcase their skills through assessments, connecting with colleges and corporates for endless opportunities.",
                 icon: ClipboardCheck,
                 href: "/mapIt",
-                image: "/assets/skillaccess_test.webp",
+                image: "/assets/our_solutions/skillaccess_test.webp",
               },
               {
                 title: "Hire It",
@@ -203,7 +203,7 @@ export default function Home() {
                   "End-to-end recruitment support to help companies find talent that aligns with their goals and culture",
                 icon: UserCheck,
                 href: "/hire-it",
-                image: "/assets/hireit_image.webp",
+                image: "/assets/our_solutions/hireit_image.webp",
                 comingSoon: true,
               },
               {
@@ -212,7 +212,7 @@ export default function Home() {
                   "Flexible staff augmentation solutions to help you quickly scale your tech teams with the right talent.",
                 icon: Users,
                 href: "/staffIt",
-                image: "/assets/resource_augmentation_test.webp",
+                image: "/assets/our_solutions/resource_augmentation_test.webp",
                 comingSoon: true,
               },
             ].map((service, index) => (
@@ -277,24 +277,24 @@ export default function Home() {
                 {[
                   {
                     quote:
-                      "Maptiu has revolutionized our hiring process. Their AI-driven platform made finding the right talent effortless and efficient. The quality of candidates and support we receive is exceptional.",
-                    author: "Sarah Chen",
+                      "With Skillaccess, we’ve saved so much time on screening candidates. The automated evaluations and insightful reports made it easy to identify top candidates and streamline our hiring.",
+                    author: "Protonshub Technologies",
                     role: "",
-                    image: "/assets/review_placeholder.png",
+                    image: "/assets/reviews/protonshub_technologies_logo.jpg",
                   },
                   {
                     quote:
-                      "The quality of candidates and the speed of hiring has improved significantly since we started working with Maptiu. Their team's dedication to understanding our needs sets them apart.",
-                    author: "Michael Rodriguez",
+                      "Skillaccess has made recruitment much more efficient for us. The platform’s accurate skill assessments and seamless integration with our existing systems have allowed us to hire the right people faster and more effectively.",
+                    author: "Qualimatrix Technologies",
                     role: "",
-                    image: "/assets/review_placeholder.png",
+                    image: "/assets/reviews/qualimatrix_logo.jpg",
                   },
                   {
                     quote:
-                      "Maptiu's resource augmentation service has been a game-changer for our project scaling needs. Their ability to quickly provide qualified talent has accelerated our growth significantly.",
-                    author: "Emily Watson",
+                      "For hiring from a pool of 300 candidates, Skillaccess was invaluable. The platform’s detailed assessments and easy candidate tracking features helped us efficiently hire the right people for the roles we needed to fill.",
+                    author: "Acropolis Institute of Technology & Research",
                     role: "",
-                    image: "/assets/review_placeholder.png",
+                    image: "/assets/reviews/acropolis_logo.jpg",
                   },
                 ].map((testimonial, index) => (
                   <CarouselItem
@@ -312,8 +312,8 @@ export default function Home() {
                               <Image
                                 src={testimonial.image || "/placeholder.svg"}
                                 alt={testimonial.author}
-                                width={50}
-                                height={50}
+                                width={80}
+                                height={80}
                                 className="rounded-full"
                               />
                               <div className="text-center">

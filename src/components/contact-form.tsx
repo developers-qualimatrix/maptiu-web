@@ -14,11 +14,14 @@ export function ContactForm() {
     full_name: "",
     email: "",
     phone: "",
+    product: "",
     description: "",
   });
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<
+      HTMLSelectElement | HTMLInputElement | HTMLTextAreaElement
+    >
   ) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
@@ -40,6 +43,7 @@ export function ContactForm() {
             full_name: formData.full_name,
             email: formData.email,
             phone: formData.phone,
+            product: formData.product,
             description: formData.description,
           },
         ])
@@ -71,6 +75,7 @@ export function ContactForm() {
         full_name: "",
         email: "",
         phone: "",
+        product: "",
         description: "",
       });
     } catch (error) {
@@ -107,22 +112,32 @@ export function ContactForm() {
             required
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#083B73] focus:border-[#083B73] block w-full p-2.5"
           />
-          {/* <Input
-            type="tel"
-            name="phone"
-            placeholder="Your Phone"
-            value={formData.phone}
-            onChange={handleChange}
-            required
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#083B73] focus:border-[#083B73] block w-full p-2.5"
-          /> */}
           <div>
             <PhoneInputField
               value={formData.phone}
               onChange={(mobile, country) =>
-                setFormData((prevState) => ({ ...prevState, phone: mobile , country }))
+                setFormData((prevState) => ({
+                  ...prevState,
+                  phone: mobile,
+                  country,
+                }))
               }
             />
+          </div>
+          {/* Dropdown for product selection */}
+          <div>
+            <select
+              name="product"
+              value={formData.product}
+              onChange={handleChange}
+              required
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#083B73] focus:border-[#083B73] block w-full p-2.5"
+            >
+              <option value="">Select a product</option>
+              <option value="Map It">Map It</option>
+              <option value="Hire It">Hire It</option>
+              <option value="Staff It">Staff It</option>
+            </select>
           </div>
           <Textarea
             name="description"

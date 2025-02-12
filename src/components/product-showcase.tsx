@@ -10,25 +10,25 @@ const showcaseItems = [
     value: "dashboard",
     title: "Intuitive Dashboard",
     description: "Powerful analytics and insights at your fingertips",
-    image: "/assets/skillaccess_dashboard.png",
+    image: "/assets/skill_access/skillaccess_dashboard.png",
   },
   {
     value: "matching",
     title: "AI-Powered Matching",
     description: "Smart algorithms that connect the perfect candidates",
-    image: "/assets/skillaccess_matching.png",
+    image: "/assets/skill_access/skillaccess_matching.png",
   },
   {
     value: "profiles",
     title: "Talent Profiles",
     description: "Comprehensive candidate profiles with verified skills",
-    image: "/assets/skillaccess_talentprofiles.png",
+    image: "/assets/skill_access/skillaccess_talentprofiles.png",
   },
   {
     value: "analytics",
     title: "Advanced Analytics",
     description: "Track and optimize your hiring process",
-    image: "/assets/skillaccess_analytics.png",
+    image: "/assets/skill_access/skillaccess_analytics.png",
   },
 ];
 
@@ -44,7 +44,7 @@ export function ProductShowcase() {
       }}
     >
       <div className="text-center">
-        <Badge className="mb-2">MapIt&apos;s - SkillAccess Platform</Badge>
+        <Badge className="mb-2">SkillAccess Platform Glimpse</Badge>
         <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
           Experience the future of hiring
         </h2>
