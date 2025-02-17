@@ -34,8 +34,11 @@ export default function StaffItPage() {
     <div className="min-h-screen overflow-hidden bg-white">
       {/* Full-Page Overlay */}
       <div className="absolute inset-0 bg-opacity-40 backdrop-blur-md flex items-center justify-center z-40">
-        <h1 className="text-black text-5xl font-bold">Coming Soon...</h1>
+        <h1 className="text-black text-3xl md:text-5xl font-bold text-center">
+          Coming Soon...
+        </h1>
       </div>
+
       {/* <section className="container mx-auto py-24 pt-24 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <Badge className="mb-4">StaffIt Augmentation</Badge>

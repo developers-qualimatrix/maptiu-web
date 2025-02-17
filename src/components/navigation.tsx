@@ -12,7 +12,13 @@ import {
   NavigationMenuTrigger,
 } from "./ui/navigation-menu";
 import { Button } from "./ui/button";
-import { Sheet, SheetContent, SheetTrigger, SheetClose } from "./ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetClose,
+  SheetTitle,
+} from "./ui/sheet";
 import Image from "next/image";
 
 export function Navigation() {
@@ -126,6 +132,10 @@ export function Navigation() {
               <Link href="/contact-us">Contact Us</Link>
             </Button>
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <div className="hidden">
+                <SheetTitle>Menu</SheetTitle>
+              </div>
+
               <SheetTrigger asChild>
                 <Button
                   variant="ghost"
@@ -211,9 +221,7 @@ export function Navigation() {
                         asChild
                         onClick={closeSheet}
                       >
-                        <Link href="/contact-us">
-                          Contact Us
-                        </Link>
+                        <Link href="/contact-us">Contact Us</Link>
                       </Button>
                     </SheetClose>
                   </div>
