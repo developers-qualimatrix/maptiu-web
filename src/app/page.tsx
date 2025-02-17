@@ -4,9 +4,6 @@ import {
   Users,
   ClipboardCheck,
   UserCheck,
-  //  GraduationCap,
-  //  School,
-  //  User
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -176,7 +173,6 @@ export default function Home() {
 
       {/* Our Solutions Section (Light) */}
       <section className="bg-white py-12 sm:py-16 md:py-24 lg:py-32">
-        (
         <div className="container px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-[800px] text-center">
             <Badge className="mb-2 sm:mb-4">Our Solutions</Badge>
@@ -254,7 +250,6 @@ export default function Home() {
             ))}
           </div>
         </div>
-        )
       </section>
 
       {/* Testimonials Section (Dark) */}

@@ -6,6 +6,7 @@ import React, { useEffect, useState } from "react";
 const cultureTabData = [
   {
     id: 1,
+    oneLiner: "Building a Seamless Digital Ecosystem for All.",
     description:
       "Learn and Unlearn every day, the world is changing faster than our expectations and to be an expert in your field you have to learn something new every day, and at the same time, you need to figure out what you need to unlearn also.",
     imageName: "/placeholder.svg?height=1080&width=1920",
@@ -14,14 +15,16 @@ const cultureTabData = [
   },
   {
     id: 2,
+    oneLiner: "Building a Seamless Digital Ecosystem for All.",
     description:
-      "Talented and Intelligent minds are the toughest to be managed, but not when you are a patient person and a good listener you can sustain the balance. People perform with excellence when they feel motivated at their Workplace, As an Hr I try my best to make this work an abode of Growth and satisfaction for everyone.",
-    imageName: "/placeholder.svg?height=1080&width=1920",
+      "I envision a future where digitalization makes life effortless, smart, and accessible to all. Technology shouldn’t just be advanced; it should feel natural, enhancing everyday experiences without complexity.",
+    imageName: "/assets/leaders/tushar_maptiu.jpg",
     empName: "Tushar Pal",
     empPosition: "CEO",
   },
   {
     id: 3,
+    oneLiner: "Success is connection, not reach.",
     description:
       "Its possible' Weather personal or professional life I have always preferred this attitude. Being a Test Architect this approach has helped me come along way when I look at bugs the only thing I got to do is to kill them.",
     imageName: "/placeholder.svg?height=1080&width=1920",
@@ -30,9 +33,10 @@ const cultureTabData = [
   },
   {
     id: 4,
+    oneLiner: "Success is connection, not reach.",
     description:
-      "We don't just sell services; we build success stories. The vibrant culture and innovative spirit not only reflect in our projects but also in the personal and professional growth of each team member. Delivering Quality is our Marketing Strategy now whether it is our services, products or our work culture.",
-    imageName: "/placeholder.svg?height=1080&width=1920",
+      "Success isn’t about reaching the masses—it’s about how deeply you connect. Tap into their essence, and you’ve already won.",
+    imageName: "/assets/leaders/mahwish_maptiu.jpg",
     empName: "Mahwish Khan",
     empPosition: "CMO",
   },
@@ -75,8 +79,9 @@ const CultureTabs: React.FC = () => {
                 <Image
                   src={tab.imageName || "/placeholder.svg"}
                   alt={tab.empName}
-                  width={32}
-                  height={32}
+                  width={750}
+                  height={750}
+                  quality={100}
                   className={`tab-image ${
                     activeTab === tab.id
                       ? "border-4 border-[#7ED957]"
@@ -86,7 +91,9 @@ const CultureTabs: React.FC = () => {
                 <h3 className="font-heading text-lg sm:text-xl md:text-2xl text-black">
                   {tab.empName}
                 </h3>
-                <p className="text-gray-600 text-xs sm:text-sm">{tab.empPosition}</p>
+                <p className="text-gray-600 text-xs sm:text-sm">
+                  {tab.empPosition}
+                </p>
               </div>
             ))}
           </div>
@@ -113,8 +120,7 @@ const CultureTabs: React.FC = () => {
                 </div>
 
                 <div className="culture-description text-base sm:text-lg text-gray-600 mb-4 italic">
-                  &quot;A company&apos;s true strength lies in the people who drive its
-                  success. Together, we build something extraordinary.&quot;
+                &rdquo;{tab.oneLiner}&rdquo;
                 </div>
 
                 <div className="small-boxes flex justify-center mt-2 sm:mt-4 space-x-2">
@@ -135,7 +141,9 @@ const CultureTabs: React.FC = () => {
                 {/* <h2 className="text-gray-800 font-medium title-font tracking-wider text-sm sm:text-base">
                   {tab.empName}
                 </h2> */}
-                <p className="text-gray-500 text-xs sm:text-sm">{tab.empPosition}</p>
+                <p className="text-gray-500 text-xs sm:text-sm">
+                  {tab.empPosition}
+                </p>
               </div>
             </div>
           </div>

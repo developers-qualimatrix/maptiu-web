@@ -72,12 +72,12 @@ export default function ContactPage() {
             </Card>
             <Card className="bg-gradient-to-br from-[#083B73] to-[#083B73] text-white rounded-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-[#083B73]/10 hover:border-[#083B73]/50 hover:shadow-[#083B73]/20">
               <CardContent className="flex items-center gap-4 p-6">
-                <MapPin className="h-6 w-6 sm:h-8 sm:w-8" />
+                <MapPin className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12" />
                 <div>
                   <h3 className="font-heading text-lg sm:text-xl">Visit Us</h3>
                   <p className="mt-1 text-sm sm:text-base">
-                    New Broad Street House, 35 New Broad Street, London, UK,
-                    EC2M 1NH
+                    Cliffton Corporate, 505-506, Vijay Nagar, Indore, Madhya
+                    Pradesh, India
                   </p>
                 </div>
               </CardContent>
@@ -180,7 +180,8 @@ export default function ContactPage() {
         <Card className="overflow-hidden rounded-lg">
           <CardContent className="p-0">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.8974796330166!2d-0.08472508487059922!3d51.51714001772752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761cad4b5b1e1d%3A0x9a7d1f3e9f7c6f9e!2sNew%20Broad%20Street%20House%2C%2035%20New%20Broad%20St%2C%20London%20EC2M%201NH%2C%20UK!5e0!3m2!1sen!2s!4v1645654524549!5m2!1sen!2s"
+              // src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.8974796330166!2d-0.08472508487059922!3d51.51714001772752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761cad4b5b1e1d%3A0x9a7d1f3e9f7c6f9e!2sNew%20Broad%20Street%20House%2C%2035%20New%20Broad%20St%2C%20London%20EC2M%201NH%2C%20UK!5e0!3m2!1sen!2s!4v1645654524549!5m2!1sen!2s"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.1146531876147!2d75.89545957581088!3d22.761125979357914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39630352379a72dd%3A0xc29d88e471dfc75d!2sQualimatrix%20Technologies%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1739792106755!5m2!1sen!2sin"
               width="100%"
               height="450"
               style={{ border: 0 }}
