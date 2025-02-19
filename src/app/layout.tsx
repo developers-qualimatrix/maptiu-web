@@ -14,6 +14,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           content="APCsx85Q7Ng8_3Q3Sv1H3Jb-S-eeCzZ4B_26tsKaHsY"
         />
 
+        {/* Google Tag Manager */}
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -23,7 +24,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-M3G4HZKW');`,
           }}
         />
+        {/* Google tag (gtag.js) */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-9TCECJTCGE"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-9TCECJTCGE');
+            `,
+          }}
+        />
       </head>
+
       <body
         className={`min-h-screen ${fontSans.variable} ${fontHeading.variable} font-sans`}
       >
