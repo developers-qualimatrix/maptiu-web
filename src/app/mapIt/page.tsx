@@ -4,13 +4,13 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
-  Brain,
   BarChart,
-  Zap,
   CheckCircle,
-  GraduationCap,
   School,
   User,
+  Briefcase,
+  Clipboard,
+  Users,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -41,14 +41,14 @@ export default function MapItPage() {
                 SkillAccess Platform
               </Badge>
               <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl">
-                Explore the Power of{" "}
+                Turning Potential into{" "}
                 <span className="bg-gradient-to-r from-[#7ED957] to-[#7ED957] bg-clip-text text-transparent">
-                  SkillAccess
+                  Possibilities
                 </span>
               </h1>
               <p className="mt-6 text-xl text-zinc-400">
-                SkillAccess unlocks endless possibilities for skill development
-                and learning.
+                Unlocking student potential, strengthening Colleges and
+                connecting Corporates for a smarter future.
               </p>
             </motion.div>
           </div>
@@ -61,14 +61,14 @@ export default function MapItPage() {
             <Badge className="w-fit mb-4 text-sm sm:text-base">
               SkillAccess Platform
             </Badge>
-            <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 sm:mb-6">
-              AI-Driven Talent Acquisition for Universities, Colleges, and
-              Corporates
+            <h1 className="font-heading leading-snug text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mb-4 sm:mb-6 md:mb-8">
+              A smart <br /> assessment <br /> platform connecting <br /> <span className="text-2xl sm:text-xl md:text-2xl lg:text-3xl text-[#083B73]">Students, Colleges and
+              Corporates</span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8">
-              Our comprehensive platform connects students, educational
-              institutions, and companies through advanced AI-powered
-              assessments and matching.
+              SkillAccess helps students showcase their skills, enables colleges
+              to streamline placements, and empowers companies to hire the right
+              talent efficiently.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
@@ -100,6 +100,7 @@ export default function MapItPage() {
           </div>
         </div>
       </section>
+      
       {/* ProductShowcase Section (Light) */}
       <section className="bg-white py-12 md:py-24">
         <div className="container px-4 sm:px-6 lg:px-8">
@@ -113,88 +114,81 @@ export default function MapItPage() {
           How It Works
         </h2>
         <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <Card className="rounded-lg transition-all duration-300 hover:shadow-lg border-[#083B73]/10 hover:border-[#083B73]/50  hover:shadow-[#083B73]/20 hover:-translate-y-1">
+          <Card className="rounded-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-[#083B73]/10 hover:border-[#083B73]/50 hover:shadow-[#083B73]/20">
             <CardContent className="p-6 sm:p-8">
-              <h3 className="font-heading text-xl sm:text-2xl mb-4">
-                For Corporates
+              <h3 className="font-heading text-xl text-center sm:text-2xl mb-6">
+                For Colleges
               </h3>
-              <p className="text-muted-foreground mb-4 text-sm sm:text-base">
-                Access a pool of highly skilled students.
-              </p>
-              <ul className="space-y-2 sm:space-y-3">
+              <ul className="max-w-[200px] mx-auto space-y-2 sm:space-y-3">
                 <li className="flex items-center gap-2 sm:gap-3">
                   <CheckCircle className="h-5 w-5 sm:h-6 sm:w-6 text-[#083B73] flex-shrink-0" />
                   <span className="text-sm sm:text-base">
-                    Customizable test templates
+                    Create & Assign Tests
                   </span>
                 </li>
                 <li className="flex items-center gap-2 sm:gap-3">
                   <CheckCircle className="h-5 w-5 sm:h-6 sm:w-6 text-[#083B73] flex-shrink-0" />
                   <span className="text-sm sm:text-base">
-                    Real-time monitoring
+                    Nominate Candidates
                   </span>
                 </li>
                 <li className="flex items-center gap-2 sm:gap-3">
                   <CheckCircle className="h-5 w-5 sm:h-6 sm:w-6 text-[#083B73] flex-shrink-0" />
                   <span className="text-sm sm:text-base">
-                    Comprehensive analytics
+                    Track Performance
                   </span>
                 </li>
               </ul>
             </CardContent>
           </Card>
-          <Card className="rounded-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-[#083B73]/10 hover:border-[#083B73]/50 hover:shadow-[#083B73]/20 ">
+          <Card className="rounded-lg transition-all duration-300 hover:shadow-lg border-[#083B73]/10 hover:border-[#083B73]/50 hover:shadow-[#083B73]/20 hover:-translate-y-1">
             <CardContent className="p-6 sm:p-8">
-              <h3 className="font-heading text-xl sm:text-2xl mb-4">
-                For Colleges
+              <h3 className="font-heading text-xl text-center sm:text-2xl mb-6">
+                For Corporates
               </h3>
-              <p className="text-muted-foreground mb-4 text-sm sm:text-base">
-                Provide students with access to top opportunities.
-              </p>
-              <ul className="space-y-2 sm:space-y-3">
+              <ul className="max-w-[200px] mx-auto space-y-2 sm:space-y-3">
                 <li className="flex items-center gap-2 sm:gap-3">
                   <CheckCircle className="h-5 w-5 sm:h-6 sm:w-6 text-[#083B73] flex-shrink-0" />
                   <span className="text-sm sm:text-base">
-                    Applicant evaluation
+                    Post Job Openings
                   </span>
                 </li>
                 <li className="flex items-center gap-2 sm:gap-3">
                   <CheckCircle className="h-5 w-5 sm:h-6 sm:w-6 text-[#083B73] flex-shrink-0" />
                   <span className="text-sm sm:text-base">
-                    Automated admissions
+                    Access Talent Pool
                   </span>
                 </li>
                 <li className="flex items-center gap-2 sm:gap-3">
                   <CheckCircle className="h-5 w-5 sm:h-6 sm:w-6 text-[#083B73] flex-shrink-0" />
-                  <span className="text-sm sm:text-base">College listing</span>
+                  <span className="text-sm sm:text-base">
+                    Design Assessments
+                  </span>
                 </li>
               </ul>
             </CardContent>
           </Card>
           <Card className="rounded-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-[#083B73]/10 hover:border-[#083B73]/50 hover:shadow-[#083B73]/20">
             <CardContent className="p-6 sm:p-8">
-              <h3 className="font-heading text-xl sm:text-2xl mb-4">
+              <h3 className="font-heading text-xl text-center sm:text-2xl mb-6">
                 For Students
               </h3>
-              <p className="text-muted-foreground mb-4 text-sm sm:text-base">
-                Discover internships and job openings.
-              </p>
-              <ul className="space-y-2 sm:space-y-3">
+              <ul className="max-w-[250px] mx-auto space-y-2 sm:space-y-3">
                 <li className="flex items-center gap-2 sm:gap-3">
                   <CheckCircle className="h-5 w-5 sm:h-6 sm:w-6 text-[#083B73] flex-shrink-0" />
                   <span className="text-sm sm:text-base">
-                    Easy test registration
+                    Access & Attempt Tests
                   </span>
                 </li>
                 <li className="flex items-center gap-2 sm:gap-3">
                   <CheckCircle className="h-5 w-5 sm:h-6 sm:w-6 text-[#083B73] flex-shrink-0" />
-                  <span className="text-sm sm:text-base">
-                    Instant result access
-                  </span>
+                  <span className="text-sm sm:text-base">Showcase Skills</span>
                 </li>
                 <li className="flex items-center gap-2 sm:gap-3">
                   <CheckCircle className="h-5 w-5 sm:h-6 sm:w-6 text-[#083B73] flex-shrink-0" />
-                  <span className="text-sm sm:text-base">College matching</span>
+                  <span className="text-sm sm:text-base">
+                    Secure Opportunities
+                  </span>
                 </li>
               </ul>
             </CardContent>
@@ -211,21 +205,23 @@ export default function MapItPage() {
               Revolutionizing Talent Acquisition
             </h2>
             <p className="text-lg sm:text-xl text-zinc-400 max-w-3xl mx-auto">
-              Our AI-driven platform connects universities, colleges, students,
-              and companies, streamlining the entire talent acquisition process.
+              Our intelligent platform connects colleges, students, and
+              corporates, simplifying assessments, job postings, and hiring for
+              a seamless recruitment experience.
             </p>
           </div>
           <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
-                icon: GraduationCap,
-                title: "Universities",
-                description: "Create and manage AI-proctored assessments",
-              },
-              {
                 icon: School,
                 title: "Colleges",
-                description: "Streamline admissions with pre-assessed profiles",
+                description: "Create, assign, and track student assessments",
+              },
+              {
+                icon: Briefcase,
+                title: "Corporates",
+                description:
+                  "Design, assign, and analyze assessments efficiently",
               },
               {
                 icon: User,
@@ -249,7 +245,7 @@ export default function MapItPage() {
               </Card>
             ))}
           </div>
-          <div className="text-center mt-12 sm:mt-16">
+          {/* <div className="text-center mt-12 sm:mt-16">
             <Button
               size="lg"
               className="bg-[#083B73] hover:bg-[#083B73]/90 text-white px-6 py-3 text-sm sm:text-base"
@@ -257,7 +253,7 @@ export default function MapItPage() {
             >
               <Link href="/mapIt">Learn More About SkillAccess</Link>
             </Button>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -269,20 +265,22 @@ export default function MapItPage() {
           <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
-                icon: Brain,
-                title: "AI-driven Matching",
+                icon: Clipboard,
+                title: "Custom Assessments",
                 description:
-                  "Advanced algorithms for perfect candidate-opportunity fit",
+                  "Create personalized assessments with advanced customization tools",
+              },
+              {
+                icon: Users,
+                title: "Talent Pool Access",
+                description:
+                  "Access a diverse pool of candidates with detailed profiles",
               },
               {
                 icon: BarChart,
-                title: "Performance Analytics",
-                description: "In-depth insights for all stakeholders",
-              },
-              {
-                icon: Zap,
-                title: "Dedicated support",
-                description: "Track student participation and test progress",
+                title: "Data-Driven Insights",
+                description:
+                  "Analyze data to monitor student performance and engagement",
               },
             ].map((feature, index) => (
               <Card

@@ -1,7 +1,7 @@
 "use client";
 import { ContactForm } from "@/components/contact-form";
 import { Card, CardContent } from "@/components/ui/card";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Map, Clock, MapPinned } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
 
@@ -56,7 +56,7 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-heading text-lg sm:text-xl">Email Us</h3>
                   <p className="mt-1 text-sm sm:text-base">
-                    contact@maptiu.com
+                    support@maptiu.com
                   </p>
                 </div>
               </CardContent>
@@ -66,7 +66,7 @@ export default function ContactPage() {
                 <Phone className="h-6 w-6 sm:h-8 sm:w-8" />
                 <div>
                   <h3 className="font-heading text-lg sm:text-xl">Call Us</h3>
-                  <p className="mt-1 text-sm sm:text-base">+1 (555) 123-4567</p>
+                  <p className="mt-1 text-sm sm:text-base">+91 9993158721</p>
                 </div>
               </CardContent>
             </Card>
@@ -142,56 +142,71 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="container py-8 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
-        <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl mb-8 sm:mb-12 text-center">
-          Our Offices
-        </h2>
-        <div className="flex justify-center items-center">
-          {[
-            {
-              city: "Indore",
-              address:
-                "Cliffton Corporate, 505-506, Sector A, Slice 6, Aranya Nagar, Scheme 78, Vijay Nagar, Indore, Madhya Pradesh 452010",
-              phone: "+44 20 1234 5678",
-            },
-          ].map((office, index) => (
-            <div
-              key={index}
-              className="rounded-lg flex flex-col items-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-[#083B73]/10 hover:border-[#083B73]/50 hover:shadow-[#083B73]/20 w-full sm:w-80 lg:w-96 mx-4"
-            >
-              <div className="p-6 text-center">
-                <h3 className="font-heading text-xl mb-2">{office.city}</h3>
-                <p className="text-muted-foreground mb-2 text-sm sm:text-base">
-                  {office.address}
-                </p>
-                <p className="text-muted-foreground text-sm sm:text-base">
-                  {office.phone}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="container py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
-        <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl mb-8 sm:mb-12 text-center">
+      <section className="container py-16 lg:py-24 px-4">
+        <h2 className="font-heading text-4xl lg:text-5xl mb-16 text-center text-black">
           Our Location
         </h2>
-        <Card className="overflow-hidden rounded-lg">
-          <CardContent className="p-0">
-            <iframe
-              // src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.8974796330166!2d-0.08472508487059922!3d51.51714001772752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761cad4b5b1e1d%3A0x9a7d1f3e9f7c6f9e!2sNew%20Broad%20Street%20House%2C%2035%20New%20Broad%20St%2C%20London%20EC2M%201NH%2C%20UK!5e0!3m2!1sen!2s!4v1645654524549!5m2!1sen!2s"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.1146531876147!2d75.89545957581088!3d22.761125979357914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39630352379a72dd%3A0xc29d88e471dfc75d!2sQualimatrix%20Technologies%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1739792106755!5m2!1sen!2sin"
-              width="100%"
-              height="450"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Maptiu Office Location"
-            />
-          </CardContent>
-        </Card>
+
+        <div className="max-w-4xl mx-auto">
+          <div className="relative bg-gradient-to-br from-white to-blue-50 rounded-3xl shadow-2xl overflow-hidden transition-all duration-300 hover:shadow-3xl hover:scale-[1.02]">
+            {/* Decorative Elements */}
+            <div className="absolute top-0 right-0 w-32 h-32 bg-blue-100 rounded-full transform translate-x-16 -translate-y-16 opacity-50" />
+            <div className="absolute bottom-0 left-0 w-24 h-24 bg-blue-100 rounded-full transform -translate-x-12 translate-y-12 opacity-50" />
+
+            {/* Main Content */}
+            <div className="relative p-8 lg:p-12">
+              {/* Location Pin Badge */}
+              <div className="absolute top-14 left-1/2 transform -translate-x-1/2 -translate-y-1/2 overflow-visible">
+                <div className="bg-white p-4 rounded-full shadow-lg border-4 border-blue-100 transition-transform duration-300 hover:rotate-12">
+                  <MapPinned size={48} className="text-blue-600" />
+                </div>
+              </div>
+
+              {/* City Name */}
+              <h3 className="text-3xl sm:text-3xl lg:text-4xl font-bold text-center mt-16 mb-8 text-blue-900">
+                Indore
+              </h3>
+
+              {/* Info Grid */}
+              <div className="grid gap-6 mt-8 md:grid-cols-2 lg:grid-cols-1">
+                {/* Address */}
+                <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center">
+                  <MapPin className="w-6 h-6 text-blue-600 mb-3" />
+                  <p className="text-gray-700 leading-relaxed max-w-2xl mx-auto">
+                    Cliffton Corporate, 505-506, Sector A, Slice 6, Aranya
+                    Nagar, Scheme 78, Vijay Nagar, Indore, Madhya Pradesh 452010
+                  </p>
+                </div>
+
+                {/* Contact Info */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center">
+                    <Phone className="w-6 h-6 text-blue-600 mb-3" />
+                    <p className="text-gray-700">+91 9993158721</p>
+                  </div>
+
+                  <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center">
+                    <Clock className="w-6 h-6 text-blue-600 mb-3" />
+                    <p className="text-gray-700">Mon-Fri: 11:00 AM - 6:00 PM</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Map Button */}
+              <div className="mt-12 flex justify-center">
+                <a
+                  href="https://maps.app.goo.gl/dbkbLTU223Y6Yqjv9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-3 bg-[#083B73] text-white px-8 py-4 rounded-lg font-semibold shadow-lg transition-all duration-300 hover:bg-[#083B73]/90 hover:shadow-xl hover:scale-105"
+                >
+                  <Map className="w-6 h-6 transition-transform group-hover:rotate-12" />
+                  <span>View on Map</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   );

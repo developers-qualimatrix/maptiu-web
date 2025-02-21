@@ -6,10 +6,10 @@ import React, { useState } from "react";
 const cultureTabData = [
   {
     id: 1,
-    oneLiner: "Building a Seamless Digital Ecosystem for All.",
+    oneLiner: "Great products solve problems not trends.",
     description:
-      "Learn and Unlearn every day, the world is changing faster than our expectations and to be an expert in your field you have to learn something new every day, and at the same time, you need to figure out what you need to unlearn also.",
-    imageName: "/placeholder.svg?height=1080&width=1920",
+      "True innovation isn’t about making the loudest splash—it’s about creating lasting change. Solve real problems, and the world will listen.",
+    imageName: "/assets/leaders/atulbharat_maptiu.jpeg",
     empName: "Atul Bharat",
     empPosition: "CPO",
   },
@@ -24,9 +24,9 @@ const cultureTabData = [
   },
   {
     id: 3,
-    oneLiner: "Success is connection, not reach.",
+    oneLiner: "Building Systems That Make Growth Feel Effortless.",
     description:
-      "Its possible' Weather personal or professional life I have always preferred this attitude. Being a Test Architect this approach has helped me come along way when I look at bugs the only thing I got to do is to kill them.",
+      "Success isn’t just about big ideas—it’s about making things work smoothly, every single day. With the right systems in place, teams thrive, businesses grow, and goals turn into reality.",
     imageName: "/placeholder.svg?height=1080&width=1920",
     empName: "Pratap Nair",
     empPosition: "COO",
@@ -74,7 +74,10 @@ const CultureTabs: React.FC = () => {
                   width={750}
                   height={750}
                   quality={100}
-                  className="tab-image w-40 h-40 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full object-cover border-4 border-[#f0f0f0] mb-4"
+                  // className="tab-image w-40 h-40 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full object-cover border-4 border-[#f0f0f0] mb-4"
+                  className={`tab-image w-40 h-40 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full border-4 border-[#f0f0f0] mb-4 ${
+                    tab.id === 1 ? "object-contain " : "object-cover"
+                  }`}
                 />
                 <h3 className="font-heading text-lg sm:text-xl md:text-2xl text-black">
                   {tab.empName}

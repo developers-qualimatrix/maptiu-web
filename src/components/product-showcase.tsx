@@ -8,26 +8,29 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 const showcaseItems = [
   {
     value: "dashboard",
-    title: "Intuitive Dashboard",
-    description: "Powerful analytics and insights at your fingertips",
+    title: "College Dashboard",
+    description: "An overview of key academic performance metrics and insights",
     image: "/assets/skill_access/skillaccess_dashboard.png",
   },
   {
     value: "matching",
-    title: "AI-Powered Matching",
-    description: "Smart algorithms that connect the perfect candidates",
+    title: "Develop Assessment",
+    description:
+      "Create and manage tailored assessments to evaluate skills effectively",
     image: "/assets/skill_access/skillaccess_matching.png",
   },
   {
     value: "profiles",
-    title: "Talent Profiles",
-    description: "Comprehensive candidate profiles with verified skills",
+    title: "Corporate Dashboard",
+    description:
+      "Monitor and manage candidate progress and skill assessments in real-time",
     image: "/assets/skill_access/skillaccess_talentprofiles.png",
   },
   {
     value: "analytics",
-    title: "Advanced Analytics",
-    description: "Track and optimize your hiring process",
+    title: "Student Evaluation",
+    description:
+      "Evaluate student performance and track academic progress seamlessly",
     image: "/assets/skill_access/skillaccess_analytics.png",
   },
 ];
@@ -62,7 +65,7 @@ export function ProductShowcase() {
             <TabsTrigger
               key={item.value}
               value={item.value}
-              className="data-[state=active]:bg-[#083B73] data-[state=active]:text-white px-2 py-1 text-xs sm:text-sm md:text-base rounded-md"
+              className="data-[state=active]:bg-[#083B73] data-[state=active]:text-white px-2 py-1 text-xs sm:text-sm md:text-sx rounded-md"
             >
               {item.title}
             </TabsTrigger>
