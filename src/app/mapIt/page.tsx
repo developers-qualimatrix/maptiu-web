@@ -62,8 +62,10 @@ export default function MapItPage() {
               SkillAccess Platform
             </Badge>
             <h1 className="font-heading leading-snug text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mb-4 sm:mb-6 md:mb-8">
-              A smart <br /> assessment <br /> platform connecting <br /> <span className="text-2xl sm:text-xl md:text-2xl lg:text-3xl text-[#083B73]">Students, Colleges and
-              Corporates</span>
+              A smart <br /> assessment <br /> platform connecting <br />{" "}
+              <span className="text-2xl sm:text-xl md:text-2xl lg:text-3xl text-[#083B73]">
+                Students, Colleges and Corporates
+              </span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8">
               SkillAccess helps students showcase their skills, enables colleges
@@ -100,7 +102,7 @@ export default function MapItPage() {
           </div>
         </div>
       </section>
-      
+
       {/* ProductShowcase Section (Light) */}
       <section className="bg-white py-12 md:py-24">
         <div className="container px-4 sm:px-6 lg:px-8">
@@ -358,7 +360,7 @@ export default function MapItPage() {
       <section className="bg-[#083B73] text-white py-16 sm:py-20 md:py-24 lg:py-32">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-6">
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-6 lg:leading-[3.5rem]">
               Ready to Transform Your Talent Acquisition?
             </h2>
             <p className="text-lg sm:text-xl mb-6 sm:mb-8">

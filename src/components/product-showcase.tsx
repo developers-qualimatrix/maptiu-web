@@ -10,28 +10,28 @@ const showcaseItems = [
     value: "dashboard",
     title: "College Dashboard",
     description: "An overview of key academic performance metrics and insights",
-    image: "/assets/skill_access/skillaccess_dashboard.png",
+    image: "/assets/skill_access/college_dashboard.png",
   },
   {
     value: "matching",
     title: "Develop Assessment",
     description:
       "Create and manage tailored assessments to evaluate skills effectively",
-    image: "/assets/skill_access/skillaccess_matching.png",
+    image: "/assets/skill_access/college_assessment.png",
   },
   {
     value: "profiles",
     title: "Corporate Dashboard",
     description:
       "Monitor and manage candidate progress and skill assessments in real-time",
-    image: "/assets/skill_access/skillaccess_talentprofiles.png",
+    image: "/assets/skill_access/corporate_dashboard.png",
   },
   {
     value: "analytics",
     title: "Student Evaluation",
     description:
       "Evaluate student performance and track academic progress seamlessly",
-    image: "/assets/skill_access/skillaccess_analytics.png",
+    image: "/assets/skill_access/student_evaluation.png",
   },
 ];
 

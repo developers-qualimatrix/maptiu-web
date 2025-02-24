@@ -9,7 +9,7 @@ const cultureTabData = [
     oneLiner: "Great products solve problems not trends.",
     description:
       "True innovation isn’t about making the loudest splash—it’s about creating lasting change. Solve real problems, and the world will listen.",
-    imageName: "/assets/leaders/atulbharat_maptiu.jpeg",
+    imageName: "/assets/leaders/atulbharat_maptiu.png",
     empName: "Atul Bharat",
     empPosition: "CPO",
   },
@@ -75,9 +75,7 @@ const CultureTabs: React.FC = () => {
                   height={750}
                   quality={100}
                   // className="tab-image w-40 h-40 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full object-cover border-4 border-[#f0f0f0] mb-4"
-                  className={`tab-image w-40 h-40 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full border-4 border-[#f0f0f0] mb-4 ${
-                    tab.id === 1 ? "object-contain " : "object-cover"
-                  }`}
+                  className={`tab-image w-40 h-40 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full border-4 border-[#f0f0f0] mb-4 object-cover`}
                 />
                 <h3 className="font-heading text-lg sm:text-xl md:text-2xl text-black">
                   {tab.empName}
