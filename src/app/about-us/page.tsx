@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Users, Target, Heart} from "lucide-react";
+import { Users, Target, Heart } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -14,13 +14,13 @@ export default function AboutPage() {
     <div className="min-h-screen bg-white">
       <section className="relative overflow-hidden bg-black py-20 pt-24 text-white md:py-32">
         <div className="absolute left-0 top-0 h-full w-full opacity-50">
-          <Image
+          {/* <Image
             src="/placeholder.svg?height=1080&width=1920"
             alt="About Hero Background"
             layout="fill"
             objectFit="cover"
             className="mix-blend-overlay"
-          />
+          /> */}
           <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent" />
         </div>
         <div className="container relative px-4 sm:px-6 lg:px-8">
@@ -61,8 +61,12 @@ export default function AboutPage() {
               <Card className="relative overflow-hidden h-full rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border-[#083B73]/10 hover:border-[#083B73]/50 hover:shadow-[#083B73]/20">
                 <CardContent className="p-6 sm:p-8">
                   <div className="absolute right-0 top-0 h-32 w-32 -translate-y-8 translate-x-8 rounded-full bg-[#083B73]/20" />
-                  <h2 className="font-heading text-2xl sm:text-3xl mb-4">{item.title}</h2>
-                  <p className="text-base sm:text-lg text-muted-foreground">{item.content}</p>
+                  <h2 className="font-heading text-2xl sm:text-3xl mb-4">
+                    {item.title}
+                  </h2>
+                  <p className="text-base sm:text-lg text-muted-foreground">
+                    {item.content}
+                  </p>
                 </CardContent>
               </Card>
             </motion.div>
@@ -74,9 +78,12 @@ export default function AboutPage() {
         <div className="container px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center mb-12 sm:mb-16">
             <Badge className="mb-4">Our Culture</Badge>
-            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl mb-4">Building Tomorrow&apos;s Workforce Today</h2>
+            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl mb-4">
+              Building Tomorrow&apos;s Workforce Today
+            </h2>
             <p className="text-lg sm:text-xl text-muted-foreground">
-              Our culture is built on innovation, collaboration, and a commitment to excellence.
+              Our culture is built on innovation, collaboration, and a
+              commitment to excellence.
             </p>
           </div>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -110,8 +117,12 @@ export default function AboutPage() {
       <section className="container py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center mb-12 sm:mb-16">
           <Badge className="mb-4">Work Process</Badge>
-          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl mb-4">We design. You grow</h2>
-          <p className="text-lg sm:text-xl text-muted-foreground">Our process is as simple as possible.</p>
+          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl mb-4">
+            We design. You grow
+          </h2>
+          <p className="text-lg sm:text-xl text-muted-foreground">
+            Our process is as simple as possible.
+          </p>
         </div>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {[
@@ -158,9 +169,13 @@ export default function AboutPage() {
               )}
               <Card className="relative overflow-hidden h-full rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border-[#083B73]/10 hover:border-[#083B73]/50 hover:shadow-[#083B73]/20">
                 <CardContent className="p-6">
-                  <div className="absolute right-2 top-2 text-6xl font-bold text-muted/10">{step.number}</div>
+                  <div className="absolute right-2 top-2 text-6xl font-bold text-muted/10">
+                    {step.number}
+                  </div>
                   <step.icon className="h-12 w-12 text-[#083B73]" />
-                  <h3 className="mt-4 font-heading text-xl mb-2">{step.title}</h3>
+                  <h3 className="mt-4 font-heading text-xl mb-2">
+                    {step.title}
+                  </h3>
                   <p className="text-muted-foreground">{step.description}</p>
                 </CardContent>
               </Card>
@@ -170,39 +185,44 @@ export default function AboutPage() {
       </section>
 
       <section className="py-16 sm:py-20 md:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 bg-white">
-      <div className="mx-auto max-w-4xl text-center">
-        <Badge className="bg-[#083B73] text-white px-3 py-1 text-sm rounded-full">Join Us</Badge>
-        <h2 className="mt-6 font-heading text-3xl sm:text-4xl md:text-5xl text-[#083B73]">
-          Ready to Transform Your Workforce?
-        </h2>
-        <p className="mt-4 text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-          Partner with us to find the right talent, drive growth, and build high-performing teams.
-        </p>
-        <div className="mt-12">
-          <h3 className="text-2xl font-semibold text-[#083B73] mb-4">Our Solutions:</h3>
-          <div className="flex flex-wrap justify-center gap-4">
-            <div className="bg-white text-[#083B73] border border-[#083B73] py-2 px-4 rounded-lg text-lg font-medium hover:bg-[#083B73] hover:text-white cursor-pointer transition-all duration-300 hover:shadow-lg">
-              Map It - SkillAccess
-            </div>
-            <div className="bg-white text-[#083B73] border border-[#083B73] py-2 px-4 rounded-lg text-lg font-medium hover:bg-[#083B73] hover:text-white cursor-pointer transition-all duration-300 hover:shadow-lg">
-              Hire It
-            </div>
-            <div className="bg-white text-[#083B73] border border-[#083B73] py-2 px-4 rounded-lg text-lg font-medium hover:bg-[#083B73] hover:text-white cursor-pointer transition-all duration-300 hover:shadow-lg">
-              Staff It
+        <div className="mx-auto max-w-4xl text-center">
+          <Badge className="bg-[#083B73] text-white px-3 py-1 text-sm rounded-full">
+            Join Us
+          </Badge>
+          <h2 className="mt-6 font-heading text-3xl sm:text-4xl md:text-5xl text-[#083B73]">
+            Ready to Transform Your Workforce?
+          </h2>
+          <p className="mt-4 text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+            Partner with us to find the right talent, drive growth, and build
+            high-performing teams.
+          </p>
+          <div className="mt-12">
+            <h3 className="text-2xl font-semibold text-[#083B73] mb-4">
+              Our Solutions:
+            </h3>
+            <div className="flex flex-wrap justify-center gap-4">
+              <div className="bg-white text-[#083B73] border border-[#083B73] py-2 px-4 rounded-lg text-lg font-medium hover:bg-[#083B73] hover:text-white cursor-pointer transition-all duration-300 hover:shadow-lg">
+                Map It - SkillAccess
+              </div>
+              <div className="bg-white text-[#083B73] border border-[#083B73] py-2 px-4 rounded-lg text-lg font-medium hover:bg-[#083B73] hover:text-white cursor-pointer transition-all duration-300 hover:shadow-lg">
+                Hire It
+              </div>
+              <div className="bg-white text-[#083B73] border border-[#083B73] py-2 px-4 rounded-lg text-lg font-medium hover:bg-[#083B73] hover:text-white cursor-pointer transition-all duration-300 hover:shadow-lg">
+                Staff It
+              </div>
             </div>
           </div>
+          <div className="mt-12">
+            <Button
+              size="lg"
+              className="w-full sm:w-auto bg-[#083B73] text-white hover:bg-[#083B73]/90 rounded-md transition-all duration-300 text-lg px-8 py-3"
+              asChild
+            >
+              <Link href="/contact-us">Get Started</Link>
+            </Button>
+          </div>
         </div>
-        <div className="mt-12">
-          <Button
-            size="lg"
-            className="w-full sm:w-auto bg-[#083B73] text-white hover:bg-[#083B73]/90 rounded-md transition-all duration-300 text-lg px-8 py-3"
-            asChild
-          >
-            <Link href="/contact-us">Get Started</Link>
-          </Button>
-        </div>
-      </div>
-    </section>
+      </section>
     </div>
   );
 }

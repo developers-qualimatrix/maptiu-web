@@ -22,7 +22,7 @@ const Leadership: React.FC = () => {
           /> */}
           <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent" />
         </div>
-        <div className="container relative px-4 sm:px-6 lg:px-8">
+        <div className="container relative px-4 sm:py-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
               <Badge className="mb-2 sm:mb-4" variant="outline">

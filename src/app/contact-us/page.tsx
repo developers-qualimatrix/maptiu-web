@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-white">
+      {/* Hero Section */}
       <section className="relative overflow-hidden bg-black py-20 sm:py-24 md:py-28 lg:py-32 text-white">
         <div className="absolute inset-0">
           {/* <Image
@@ -76,8 +77,8 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-heading text-lg sm:text-xl">Visit Us</h3>
                   <p className="mt-1 text-sm sm:text-base">
-                    Cliffton Corporate, 505-506, Vijay Nagar, Indore, Madhya
-                    Pradesh, India
+                    505-506 , Cliffton Corporate, Vijay Nagar, Indore, Madhya
+                    Pradesh 452010
                   </p>
                 </div>
               </CardContent>
@@ -173,8 +174,8 @@ export default function ContactPage() {
                 <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center">
                   <MapPin className="w-6 h-6 text-blue-600 mb-3" />
                   <p className="text-gray-700 leading-relaxed max-w-2xl mx-auto">
-                    Cliffton Corporate, 505-506, Sector A, Slice 6, Aranya
-                    Nagar, Scheme 78, Vijay Nagar, Indore, Madhya Pradesh 452010
+                    505-506 , Cliffton Corporate, Vijay Nagar, Indore, Madhya
+                    Pradesh 452010
                   </p>
                 </div>
 

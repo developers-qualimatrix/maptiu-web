@@ -9,13 +9,13 @@ const cultureTabData = [
     oneLiner: "Great products solve problems not trends.",
     description:
       "True innovation isn’t about making the loudest splash—it’s about creating lasting change. Solve real problems, and the world will listen.",
-    imageName: "/assets/leaders/atulbharat_maptiu.png",
+    imageName: "/assets/leaders/atulbharat_maptiu.jpg",
     empName: "Atul Bharat",
     empPosition: "CPO",
   },
   {
     id: 2,
-    oneLiner: "Building a Seamless Digital Ecosystem for All.",
+    oneLiner: "A Digital Ecosystem Designed for Simplicity.",
     description:
       "I envision a future where digitalization makes life effortless, smart, and accessible to all. Technology shouldn’t just be advanced; it should feel natural, enhancing everyday experiences without complexity.",
     imageName: "/assets/leaders/tushar_maptiu.jpg",
@@ -27,7 +27,7 @@ const cultureTabData = [
     oneLiner: "Building Systems That Make Growth Feel Effortless.",
     description:
       "Success isn’t just about big ideas—it’s about making things work smoothly, every single day. With the right systems in place, teams thrive, businesses grow, and goals turn into reality.",
-    imageName: "/placeholder.svg?height=1080&width=1920",
+    imageName: "/assets/leaders/pratapnair_maptiu.jpeg",
     empName: "Pratap Nair",
     empPosition: "COO",
   },
