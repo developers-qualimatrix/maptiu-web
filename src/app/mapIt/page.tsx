@@ -247,15 +247,6 @@ export default function MapItPage() {
               </Card>
             ))}
           </div>
-          {/* <div className="text-center mt-12 sm:mt-16">
-            <Button
-              size="lg"
-              className="bg-[#083B73] hover:bg-[#083B73]/90 text-white px-6 py-3 text-sm sm:text-base"
-              asChild
-            >
-              <Link href="/mapIt">Learn More About SkillAccess</Link>
-            </Button>
-          </div> */}
         </div>
       </section>
 
