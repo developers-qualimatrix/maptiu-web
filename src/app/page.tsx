@@ -1,10 +1,6 @@
 "use client";
 
-import {
-  Users,
-  ClipboardCheck,
-  UserCheck,
-} from "lucide-react";
+import { Users, ClipboardCheck, UserCheck } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";

@@ -1,7 +1,7 @@
 "use client";
 import { ContactForm } from "@/components/contact-form";
 import { Card, CardContent } from "@/components/ui/card";
-import { Mail, Phone, MapPin, Map, Clock, MapPinned } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, MapPinned } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
 
@@ -191,19 +191,6 @@ export default function ContactPage() {
                     <p className="text-gray-700">Mon-Fri: 11:00 AM - 6:00 PM</p>
                   </div>
                 </div>
-              </div>
-
-              {/* Map Button */}
-              <div className="mt-12 flex justify-center">
-                <a
-                  href="https://maps.app.goo.gl/dbkbLTU223Y6Yqjv9"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center gap-3 bg-[#083B73] text-white px-8 py-4 rounded-lg font-semibold shadow-lg transition-all duration-300 hover:bg-[#083B73]/90 hover:shadow-xl hover:scale-105"
-                >
-                  <Map className="w-6 h-6 transition-transform group-hover:rotate-12" />
-                  <span>View on Map</span>
-                </a>
               </div>
             </div>
           </div>
