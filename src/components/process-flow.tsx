@@ -1,79 +1,84 @@
 "use client";
-
 import { motion } from "framer-motion";
-import { Rocket, Clock, Users, Target } from "lucide-react";
+import { ClipboardCheck, Network, Users, UserCheck } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
 import { Badge } from "./ui/badge";
 
 export function ProcessFlow() {
   const processes = [
     {
-      icon: Clock,
-      title: "Swift Response",
+      icon: ClipboardCheck,
+      title: "Skill Assessment",
       description:
-        "We respond to your talent needs within 24 hours, ensuring no time is wasted in your hiring process.",
+        "Students showcase their abilities through targeted assessments, highlighting their strengths and potential.",
       gradient: "from-[#083B73] to-[#083B73]",
     },
     {
-      icon: Target,
-      title: "Precise Matching",
+      icon: Network,
+      title: "Talent Marketplace",
       description:
-        "Our AI-driven platform analyzes requirements to find the perfect candidate matches for your needs.",
+        "Seamlessly connect with a vast network of colleges and corporates, creating diverse opportunities for growth.",
       gradient: "from-[#083B73] to-[#083B73]",
     },
     {
       icon: Users,
-      title: "Expert Screening",
+      title: "Staff Augmentation",
       description:
-        "Our recruitment experts conduct thorough assessments to ensure quality candidates.",
+        "Quickly scale your tech teams with on-demand, skilled professionals tailored to your project needs.",
       gradient: "from-[#083B73] to-[#083B73]",
     },
     {
-      icon: Rocket,
-      title: "Quick Deployment",
+      icon: UserCheck,
+      title: "Recruitment Solutions",
       description:
-        "Streamlined onboarding process gets your new talent operational in record time.",
+        "End-to-end hiring support to match businesses with candidates who fit their goals and culture perfectly.",
       gradient: "from-[#083B73] to-[#083B73]",
     },
   ];
 
   return (
-    <section className="relative overflow-hidden bg-white py-24">
+    <section className="relative overflow-hidden bg-white py-12 sm:py-16 md:py-20 lg:py-24">
       <div className="container relative px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-2">
+        <div className="grid gap-8 md:gap-12 lg:grid-cols-2">
           {/* Left Column - Text */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
             >
-                <div className="flex justify-center sm:justify-start">
+              <div className="flex justify-center sm:justify-start">
                 <Badge
                   variant="outline"
-                  className="border-[#083B73] text-white bg-[#083B73]"
+                  className="border-[#083B73] text-white bg-[#083B73] text-xs sm:text-sm"
                 >
                   Our Process Flow
                 </Badge>
-                </div>
-              <h2 className="mt-6 font-heading text-4xl leading-tight text-black sm:text-5xl lg:text-6xl">
-                We are a{" "}
+              </div>
+              <h2 className="mt-4 sm:mt-6 font-heading text-3xl sm:text-4xl md:text-5xl lg:text-5xl leading-tight text-black">
+                One Platform,{" "}
                 <span className="bg-gradient-to-r from-[#083B73] to-[#083B73] bg-clip-text text-transparent">
-                  talent solutions
+                  <br />
+                  Endless Possibilities:
                 </span>{" "}
-                agency that combines expertise with technology.
+                <br className="hidden sm:inline" />
+                <span className="text-2xl font-semibold text-[#083B73] mt-2 block">
+                  Assess Talent | Staff Smart | Hire Right
+                </span>
               </h2>
-              <p className="mt-6 text-lg text-muted-foreground">
-                Our streamlined process ensures efficient talent acquisition,
-                combining human expertise with cutting-edge technology to
-                deliver exceptional results.
+
+              <p className="mt-4 sm:mt-6 text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                We help you find the right people, a smart way. From assessing
+                skills to building strong tech teams and hiring top talent, our
+                platform makes the entire process simple, seamless, and
+                effective.
               </p>
             </motion.div>
           </div>
 
           {/* Right Column - Process Cards */}
-          <div className="grid gap-6 sm:grid-cols-2">
+          <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2">
             {processes.map((process, index) => (
               <motion.div
                 key={process.title}
@@ -83,16 +88,16 @@ export function ProcessFlow() {
                 viewport={{ once: true }}
               >
                 <Card className="group relative overflow-hidden bg-white border-[#083B73]/10 transition-all duration-300 hover:border-[#083B73]/50 hover:shadow-xl hover:shadow-[#083B73]/20 hover:-translate-y-1 rounded-md shadow-lg">
-                  <CardContent className="p-6 group-hover:h-auto h-48 transition-all">
+                  <CardContent className="p-4 sm:p-6 group-hover:h-auto h-auto sm:h-52 transition-all">
                     <div
-                      className={`flex h-12 w-12 items-center justify-center rounded-lg bg-[#083B73]`}
+                      className={`flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-lg bg-[#083B73]`}
                     >
-                      <process.icon className="h-6 w-6 text-white" />
+                      <process.icon className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
                     </div>
-                    <h3 className="font-heading text-xl text-[#083B73]">
+                    <h3 className="font-heading text-lg sm:text-xl text-[#083B73] mt-2 sm:mt-3">
                       {process.title}
                     </h3>
-                    <p className="mt-2 text-sm text-muted-foreground">
+                    <p className="mt-2 text-xs sm:text-sm text-muted-foreground">
                       {process.description}
                     </p>
                   </CardContent>

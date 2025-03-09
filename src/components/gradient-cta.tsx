@@ -19,12 +19,12 @@ export function GradientCTA() {
       <div className="relative flex flex-col items-center justify-between gap-6 text-center md:flex-row md:text-left">
         <div className="space-y-4">
           <h2 className="bg-gradient-to-r from-[#7ED957] to-[#7ED957] bg-clip-text font-heading text-3xl text-transparent sm:text-4xl md:text-5xl">
-            You bring the talent,
+          Smart Talent Solutions
             <br />
-            we make it happen!
+            for a Smarter Tomorrow!
           </h2>
-          <p className="max-w-2xl text-lg text-zinc-400">
-            Schedule a discovery call with our talent experts and discuss your hiring needs in detail.
+          <p className="max-w-3xl text-lg text-zinc-400">
+          Our talent experts are ready to help you build your dream team. Schedule a call today!
           </p>
         </div>
         <Button

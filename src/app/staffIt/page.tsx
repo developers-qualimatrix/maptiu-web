@@ -16,7 +16,7 @@
 // import Link from "next/link";
 import { useEffect } from "react";
 
-export default function ResourceAugmentationPage() {
+export default function StaffItPage() {
   // Disable scrolling when the component mounts
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -31,14 +31,17 @@ export default function ResourceAugmentationPage() {
 
   return (
     // bg-[#FFF5F0]
-    <div className="min-h-screen overflow-hidden">
+    <div className="min-h-screen overflow-hidden bg-white">
       {/* Full-Page Overlay */}
-      <div className="absolute inset-0 bg-white bg-opacity-40 backdrop-blur-md flex items-center justify-center z-40">
-        <h1 className="text-black text-5xl font-bold">Coming Soon...</h1>
+      <div className="absolute inset-0 bg-opacity-40 backdrop-blur-md flex items-center justify-center z-40">
+        <h1 className="text-black text-3xl md:text-5xl font-bold text-center">
+          Coming Soon...
+        </h1>
       </div>
+
       {/* <section className="container mx-auto py-24 pt-24 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <Badge className="mb-4">Resource Augmentation</Badge>
+          <Badge className="mb-4">StaffIt Augmentation</Badge>
           <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl mb-6">Scale Your Workforce with Ease</h1>
           <p className="text-xl text-muted-foreground mb-8">
             Flexible and scalable resource augmentation solutions to meet your business needs.
